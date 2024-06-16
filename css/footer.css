@@ -1,0 +1,226 @@
+@import url(/css/reset.css);
+
+body{
+    font-size: 16px;
+    font-family: 'Noto_Sans_TC', sans-serif;
+    font-weight: 400;
+    line-height: 160%;
+    letter-spacing: 0.5px;
+    color: #161616;
+}
+
+/* ------------------ Footer Start ------------------ */
+
+/* 整個footer */
+.footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: #0073A6;
+    margin: 0 auto;
+    padding: 25px 81px;
+}
+
+/* 左側區域 */
+.left-area{
+    width: 20%;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 49px;
+    padding-top: 10px;
+}
+
+/* logo圖 */
+.footer .logo img{
+    width: 200px;
+}
+
+/* social-media icon */
+.social-media{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+.social-media .bi{
+    font-size: 45px;
+    color:#fff;
+}
+
+/* apps */
+.apps{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+.apps img{
+    max-width: 128px;
+}
+.apps li{
+    list-style: none;
+}
+.apps-icon{
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+
+    display: none;
+}
+.apps-icon .bi{
+    font-size: 24px;
+    color: #161616;
+}
+
+/* line */
+.footer .line{
+    width: 1px;
+    height: 450px;
+    background-color: #fff;
+    margin: 0 57px;
+}
+
+/* right-area */
+.right-area{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+.right-area h6{
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    padding: 10px 0;
+}
+.right-area a{
+    text-decoration: none;
+}
+.right-area p{
+    color: #fff;
+    font-size: 14px;
+}
+.right-area .footer-list{
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.right-area .list-item{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+/* copyright */
+.copyright{
+    background-color: #EFEFEF;
+    padding: 12px 36px;
+}
+.copyright p{
+    color: #545454;
+    font-size: 12px;
+    text-align: center;
+}
+
+.copyright p:nth-child(2){
+    display: none;
+}
+.copyright span{
+    color: #478E8F;
+}
+.tibame{
+    padding: 0 36px;
+    background-color: #EFEFEF;
+}
+.tibame p{
+    font-size: 12px;
+    color: #161616;
+    text-align: center;
+    font-weight: 700;
+}
+/* ------------------ Footer End ------------------ */
+
+
+/* ------------------ Footer-RWD Start ------------------ */
+
+@media screen and (max-width: 1024px) {
+    .footer {
+        flex-direction: column; /* 小螢幕下垂直排列 */
+        align-items: center;
+        padding: 24px 0px;
+        gap: 32px;
+    }
+    .left-area{
+        flex-direction: row;
+        justify-content: center;
+        width: 0%;
+        min-width: 0px;
+        gap: 32px;
+        padding: 0;
+        order: 2;
+    }
+    .footer .logo img{
+        display: none;
+    }
+    .social-media .bi{
+        font-size: 24px;
+        color:#fff;
+    }
+    .apps{
+        display: none;
+    }
+    .apps-icon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .footer .line{
+        display: none;
+    }
+    .right-area{
+        order: 1;
+    }
+    .right-area .list-item{
+        display: none;
+    }
+    .copyright p{
+        display: none;
+    }
+    .copyright p:nth-child(2){
+        display: block;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .footer{
+        padding: 0;
+        gap: 0;
+    }
+    .right-area{
+        flex-direction: column;
+    }
+    .right-area .footer-list h6{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .left-area{
+        padding: 10px;
+    }
+    .copyright{
+        padding: 10px 36px;
+    }
+    .tibame p{
+        font-size: 11px;
+    }
+}
+/* ------------------ Footer-RWD End ------------------ */
+
+
+
+
+

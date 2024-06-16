@@ -1,0 +1,408 @@
+@import url(../css/reset.css);
+
+body {
+    font-size: 16px;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 400;
+    line-height: 160%;
+    letter-spacing: 0.5px;
+    color: #161616;
+}
+
+/* ------------------ Header Start ------------------ */
+header {
+    width: 100%;
+}
+.container {
+    margin: 0 auto;
+    max-width: 1280px;
+}
+
+/* Top-bar */
+.top-bar {
+    background-color: #0073A6;
+    padding: 5px 80px;
+}
+
+.top-bar ol {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+}
+
+.top-bar ol li {
+    display: flex;
+    align-items: center;
+}
+
+
+/* EN */
+.top-bar ol li a {
+    text-decoration: none;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    letter-spacing: 0px;
+    font-weight: 700;
+}
+.top-bar ol li a:hover{
+    color: #D7D7D7;
+}
+
+/* 地球&info */
+.top-bar ol li a i {
+    color: #FFF;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+}
+.top-bar ol li a i:hover{
+    color: #D7D7D7;
+
+
+}
+
+/* 中間 */
+.header-main {
+    background-color: #fff;
+    padding: 25px 80px;
+    /*  */
+    position: relative;
+
+}
+
+.header-main .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 89px;
+
+
+}
+
+.header-main .container .ham-logo {
+    display: flex;
+    align-items: center;
+}
+
+/* 漢堡icon */
+.header-main .container .ham-logo .bi-list {
+    color: #0073A6;
+    font-size: 30px;
+    margin-right: 25px;
+}
+
+/* logo圖 */
+.header-main .logo {
+    background-image: url('../img/logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 200px;
+    height: 90px;
+}
+
+/* 主選單 */
+.header-main .container .main-nav {
+    display: flex;
+    align-items: center;
+}
+
+.header-main .container .main-nav ol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.header-main .container .main-nav ol li {
+    padding: 10px;
+    position: relative;
+}
+
+.header-main .container .main-nav ol li:not(:last-child):after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 60%;
+    background-color: #545454;
+    position: absolute;
+    right: -4px;
+    top: 50%;
+    transform: translate(0, -50%);
+    margin-left: 50px;
+}
+
+.header-main .container .main-nav ol li a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #545454;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.header-main .container .main-nav ol li a:hover{
+    color: #1C4F92;
+    transform: translate(0, -2px);
+    transition: all 0.5s ease-in-out;
+}
+
+
+
+/* 下拉選單 */
+.dropdown{
+    display: flex;
+    width: 1440px;
+    height: 450px;
+    position: absolute;
+    left: -100%;
+    top: 93px;
+    z-index: 5;
+    background-color: #fff;
+
+    display: none;
+}
+
+/* 懸停在第一個 li 時顯示下拉菜單 */
+.main-nav ol li:hover .dropdown {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dropdown-items{
+    display: flex;
+    flex-direction: column;
+    flex: 40%;
+
+    padding: 20px 0px 20px 80px;
+
+}
+.dropdown-img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    background-color: #E8EDF4;
+    flex: 60%;
+    padding: 20px 10px;
+}
+.dropdown-img h6{
+    align-self: flex-start;
+    font-size: 18px;
+    font-weight: 700;
+    color: #161616;
+    margin-bottom: 15px;
+}
+.dropdown-img img{
+    width: 683px;
+    height: 268px;
+}
+
+.dropdown-items h2{
+    color: #1C4F92;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 32px;
+}
+.dropdown-items .items {
+    display: flex;
+    /* flex: 1 0 30%; */
+    flex: 1;
+
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.dropdown-items .items p{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 160%;
+    padding: 10px;
+
+}
+
+.dropdown-items .items p a{
+    color: #545454;
+    text-decoration: none;
+}
+
+
+/* 下拉選單結束 */
+
+
+/* 特殊 */
+.header-main .container-d {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    padding: 30px 0;
+    display: none;
+}
+
+/* icon-nav */
+.icon-nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.icon-nav ol {
+    list-style: none;
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */
+    gap: 24px;
+}
+
+.icon-nav ol li {
+    display: flex;
+    align-items: center;
+}
+
+.icon-nav ol li a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.icon-nav ol li a i {
+    color: #545454;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+}
+.icon-nav ol li a i:hover{
+    color: #0073A6;
+}
+
+/* 特殊 */
+.icon-nav ol li .bi-cart {
+    position: relative;
+}
+.icon-nav ol li .bi-cart::after {
+    content: '2'; /* 這裡設置通知數字 */
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 20px;
+}
+.icon-nav ol li:nth-child(5) {
+    display: none;
+}
+/* 最新消息 */
+.news {
+    background-color: #EFEFEF;
+    padding: 4px 80px;
+    z-index: 1; /* 保證在下拉菜單之下 */
+}
+
+.news p a {
+    color: #545454;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width:1400px) {
+    .header-main .container {
+        gap: 20px;
+        transition: all 0.3s ease; /* 添加過渡效果 */
+    }
+}
+
+@media screen and (max-width:1240px) {
+    .header-main .container .main-nav {
+        display: none;
+        transition: all 0.3s ease; /* 添加過渡效果 */
+    }
+    .header-main .container-d {
+        display: flex;
+        border-top: 1px solid #ccc;
+        transition: all 0.3s ease; /* 添加過渡效果 */
+    }
+    .header-main .container-d .main-nav-d {
+        display: flex;
+        transition: all 0.3s ease; /* 添加過渡效果 */
+    }
+    header .container {
+        width: 100%;
+        transition: all 0.3s ease; /* 添加過渡效果 */
+    }
+    .top-bar {
+        padding: 5px 24px;
+        transition: all 0.3s ease; /* 添加過渡效果 */
+    }
+    .header-main {
+        padding: 25px 24px 0px 24px;
+        transition: all 0.3s ease; /* 添加過渡效果 */
+    }
+    .news {
+        padding: 4px 24px;
+        transition: all 0.3s ease; /* 添加過渡效果 */
+    }
+    .dropdown{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .dropdown-items{
+        padding: 30px 80px;
+    }
+    .dropdown-img{
+        padding: 30px 80px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .top-bar{
+        display: none;
+    }
+    .header-main .logo {
+        width: 135px;
+        height: 35px;
+    }
+    /* 左邊漢堡icon */
+    .header-main .container .ham-logo .bi-list {
+        display: none;
+    }
+    .icon-nav ol li:nth-child(5) {
+        display: flex;
+        color: #545454;
+    }
+    .icon-nav ol{
+        gap: 15px;
+    }
+    .header-main {
+        padding: 25px 24px 25px 24px;
+    }
+    .header-main .container-d {
+        display: none;
+    }
+}
+
+@media screen and (max-width:430px){
+    .header-main {
+        padding: 25px 12px 25px 12px;
+    }
+    .news{
+        display: none;
+    }
+    .icon-nav ol{
+        gap: 12px;
+    }
+} 

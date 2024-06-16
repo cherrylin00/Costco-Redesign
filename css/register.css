@@ -1,0 +1,327 @@
+@import url(/css/reset.css);
+
+body{
+    font-size: 16px;
+    font-family: 'Noto_Sans_TC', sans-serif;
+    font-weight: 400;
+    line-height: 160%;
+    letter-spacing: 0.5px;
+    color: #161616;
+}
+/* ------------------ 共用樣式 ------------------ */
+
+/* Radiobtn 右邊距離12 */
+.radiobtn{
+    margin-right: 4px;
+}
+/* Radiobtn選項文字顏色 */
+.radiotext{
+    color: #8F8F8F;
+}
+/* Radio&選項 右邊距離20 */
+.radio-item{
+    margin-right: 20px;
+}
+
+/* 輸入框標題&必填 */
+.input-top{
+    overflow: hidden;
+    margin-bottom: 8px;
+    position: relative;
+}
+/* 輸入框標題 */
+.input-title{
+    float: left;
+    font-weight: 500;
+    color: #545454;
+}
+/* 輸入框必填 */
+.input-must{
+    float: right;
+    font-size: 14px;
+    color: red;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+/* 輸入框 */
+.input-area{
+    width: 100%;
+    height: 50px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 24px;
+    box-sizing: border-box;
+    clear: both;
+}
+
+/* Checkbox 右邊距離16*/
+.checkbox-area{
+    margin-right: 16px;
+}
+/* 網頁按鈕樣式 */
+.btn{
+    width: 500px;
+    height: 50px;
+    background-color: #1C4F92;
+    border: 0;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+}
+.btn:hover{
+    background-color: #153B6E;
+
+}
+
+
+
+/* ------------------ Redister Start ------------------ */
+
+.register_main{
+    padding: 40px 50px 55px 50px;
+}
+
+/* 麵包屑 */
+.breadcrumb{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    list-style: none;
+    background-color: #fff;
+}
+.breadcrumb-item{
+    display: flex;
+    align-items: center;
+}
+.breadcrumb-item:not(:last-child):after{
+    content: '\F285';
+    font-family: 'Bootstrap-Icons';
+    font-size: 12px;
+    display: inline-block;
+    padding: 0 10px;
+}
+.breadcrumb-item a{
+    text-decoration: none;
+    font-size: 12px;
+    color: #545454;
+}
+.breadcrumb-item a:hover{
+    color: #1C4F92;
+}
+
+
+
+
+/* 大標 */
+.register_main h1{
+
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    margin: 10px 0 30px 0;
+    line-height: 160%;
+}
+
+/* 資料區域 */
+.register_section{
+    display: flex;
+    flex-direction: column;
+    /* width: 516px; */
+    width: 40%;
+    margin: 0 auto;
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+
+/* 身分證 */
+.chooseid{
+    display: flex;
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.chooseid .input-must{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.id-verify{
+    position: relative;
+}
+/* 身分證驗證btn */
+.verify-btn{
+    width: 109px;
+    border-radius: 0 8px 8px 0;
+    color: #fff;
+    font-size: 16px;
+    position: absolute;
+    right: 0;
+    top: auto;
+}
+
+/* 姓名 */
+
+/* 性別 */
+.gender{
+    overflow: hidden;
+    padding: 12px;
+    margin-bottom: 24px;
+}
+.gender li{
+    float: left;
+}
+
+/* 英文名字/姓氏 */
+.englishname{
+    display: flex;
+    justify-content: space-between;
+}
+.firstname{
+    flex: 1;
+    margin-right: 10px;
+}
+
+.lastname{
+    flex: 1;
+    margin-left: 10px;
+}
+
+.englishname .firstname .input-must{
+    display: none;
+}
+
+.englishname .lastname .input-must{
+    display: none;
+}
+
+/* 縣市/郵遞區號 */
+.live{
+    display: flex;
+    justify-content: space-between;
+}
+.city{
+    flex: 1;
+    margin-right: 10px;
+}
+.zipcode{
+    flex: 1;
+    margin-left: 10px;
+}
+
+/* 聯絡地址 */
+.address .input-must{
+    display: none;
+}
+
+/* 電子信箱 */
+.input-memo{
+    color: #B3B3B3;
+    font-size: 16px;
+    font-weight: 500;
+}
+.email .input-area{
+    margin-bottom: 8px;
+}
+.email{
+    margin-bottom: 24px;
+}
+
+/* 確認電子信箱 */
+
+/* 密碼 */
+
+/* 確認密碼 */
+
+/* 行動電話 */
+
+/* 聯絡電話 */
+.phone-num .input-must{
+    display: none;
+}
+
+/* 下方勾選權益及行銷 */
+.agree-area{
+    display: flex;
+    flex-direction: column;
+}
+
+.agree-area p{
+    color: #545454;
+}
+.agree-area span a{
+    text-decoration: none;
+    color: #40768A;
+}
+
+.agree-area li label{
+    display: flex;
+    margin-bottom: 24px;
+}
+
+/* 填寫完成btn */
+.register-submit-area{
+    display: flex;
+    justify-content: center;
+    margin-top: 6px;
+}
+
+/* ------------------ Redister End ------------------ */
+
+
+/* ------------------ Redister-RWD Start ------------------ */
+
+@media screen and (max-width: 1240px){
+    .chooseid{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+}
+@media screen and (max-width: 1024px){
+    .register_section{
+        width: 456px;
+        width: 35%;
+    }
+    .register_main h1{
+        font-size: 32px;
+    }
+    .breadcrumb{
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 520px){
+    .register_main{
+        padding: 20px 12px 35px 12px;
+    }
+    .register_section{
+        width: 100%;
+    }
+    .register_main h1{
+        font-size: 24px;
+    }
+    .chooseid{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 24px;
+    }
+    .chooseid li:first-child{
+        margin-bottom: 8px;
+    }
+    .agree-area p{
+        font-size: 16px;
+    }
+    .breadcrumb{
+        padding: 10px 12px;
+        margin-left: 0;
+    }
+
+}
+/* ------------------ Redister-RWD End ------------------ */

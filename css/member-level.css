@@ -1,0 +1,476 @@
+@import url(../css/reset.css);
+
+body {
+    font-size: 16px;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 400;
+    line-height: 160%;
+    letter-spacing: 0.5px;
+    color: #161616;
+}
+
+/* radiobtn */
+/* 隱藏原生radio按鈕 */
+.membership-radio {
+    display: none;
+}
+.membership-options{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
+    display: none;
+}
+/* 基本label樣式 */
+.membership-label {
+    display: inline-flex;
+    align-items: center;
+    font-size: 18px;
+    color: #545454;
+    margin-right: 20px;
+}
+
+/* 自訂radio按鈕 */
+.membership-label::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    margin-right: 12px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+/* 當radio按鈕被選中時的樣式 */
+.membership-radio:checked + .membership-label::before {
+    border-color: #0073A6;
+    background-color: #0073A6;
+    box-shadow: 0 0 0 2px #fff inset;
+}
+
+
+/* ------------------ Member-levle Start ------------------ */
+
+/* .wrapper{
+    max-width: 1440px;
+    padding: 40px 0px;
+    margin: 0 auto;
+} */
+
+.wrapper{
+    width: 100%;
+    padding: 20px 0;
+}
+/* 麵包屑 */
+.breadcrumb{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    list-style: none;
+    background-color: #fff;
+}
+.breadcrumb-item{
+    display: flex;
+    align-items: center;
+}
+.breadcrumb-item:not(:last-child):after{
+    content: '\F285';
+    font-family: 'Bootstrap-Icons';
+    font-size: 12px;
+    display: inline-block;
+    padding: 0 10px;
+}
+.breadcrumb-item a{
+    text-decoration: none;
+    font-size: 12px;
+    color: #545454;
+}
+.breadcrumb-item a:hover{
+    color: #1C4F92;
+}
+
+/* main */
+.main{
+    padding: 10px 0;
+}
+
+/* 大標 */
+.main-title{
+    text-align: center;
+    font-size: 40px; 
+    font-weight: 700;
+    line-height: 160%;
+    margin-bottom: 40px;
+}
+
+/* 卡片都在這 */
+.main-container{
+    display: flex;
+    margin-bottom: 50px;
+}
+.sort{
+    flex: 1 1 50%;
+}
+
+/* 個人vs商業 */
+.sort-title{
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 24px;
+}
+.sort-title h2{
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 160%;
+}
+.sort-title p{
+    font-weight: 500;
+}
+
+/* 分隔線 */
+.line{
+    width: 1px;
+    height: auto;
+    background-color: #ccc;
+    margin: 0 50px;
+    align-self: stretch;
+}
+.card-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0 24px 0;
+    min-width: 275px;
+    height: 380px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+    position: relative;
+    /* 卡片過渡動畫 */
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+}
+
+/* 紅色小標籤 */
+.tag{
+    width: 65px;
+    height: 35px;
+    background-color: #E31936;
+    border-radius: 0px 0px 10px 10px;
+    position: absolute;
+    left: 10px;
+    top: 0;
+}
+.tag p{
+    font-size: 14px;
+    color: #fff;
+    font-weight: 700;
+    line-height: 35px;
+    text-align: center;
+}
+
+/* 卡片會員名稱&價錢 */
+.card-top{
+    margin: 40px 0px 20px 0px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+.card-top h3{
+    font-size: 28px;
+    font-weight: 700;
+    color: #1C4F92;
+    line-height: 160%;
+}
+.card-top p{
+    font-size: 16px;
+    color: #545454;
+    line-height: 160%;
+}
+.card-top span{
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 160%;
+    color: #E31936;
+}
+
+/* 卡片下方內容&ICON */
+.card-content{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.card-content p{
+    font-size: 16px;
+    color: #545454;
+    display: flex;
+    align-items: center;
+}
+.card-content p::before{
+    content: '\F272';
+    font-family: 'bootstrap-icons';
+    font-size: 18px;
+    color: #E31936;
+    margin-right: 8px;
+}
+
+/* 兩張卡不要小標籤 */
+.p-diamond .tag{
+    display: none;
+}
+.b-normal .tag{
+    display: none;
+}
+
+/* btn */
+/* 填寫完成btn */
+
+/* 網頁按鈕樣式 */
+.btn{
+    width: 250px;
+    height: 50px;
+    background-color: #1C4F92;
+    border: 0;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+}
+.btn:hover{
+    background-color: #153B6E;
+}
+.submit-area{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+.submit-area .btn-area{
+    display: flex;
+    gap: 24px;
+}
+
+/* 按鈕下方註冊文字 */
+.submit-area p{
+    color: #161616;
+}
+.submit-area span a{
+    line-height: 160%;
+    font-weight: 700;
+    text-decoration: none;
+    color: #161616;
+}
+.submit-area span{
+    border-bottom: 1px solid #161616;
+}
+
+/* 特殊 */
+.extra{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.extra p{
+    font-size: 16px;
+    color: #545454;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.extra p::after{
+    content: '\F272';
+    font-family: 'bootstrap-icons';
+    font-size: 18px;
+    color: #E31936;
+    margin-right: 8px;
+}
+.extra{
+    display: none;
+}
+
+/* ------------------ Member-levle End ------------------ */
+
+
+
+/* ------------------ Member-levle-RWD Start ------------------ */
+@media screen and (max-width:1280px){
+    .main-container{
+        flex-direction: column;
+        margin-bottom: 100px;
+        gap: 100px;
+    }
+    .sort{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+    }
+    .line{
+        display: none;
+    }
+    .sort-title{
+        min-width: 200px;
+        height: 100%;
+        margin: 0;
+        padding-right: 50px;
+    }
+    .main-title{
+        margin-bottom: 100px;
+    }
+}
+@media screen and (max-width:1024px){
+    .breadcrumb{
+        margin-left: 16px;
+    }
+    .membership-options{
+        display: flex;
+        gap: 16px;
+    } 
+    .sort-title{
+        display: none;
+    }
+    .sort{
+        flex-direction: column;
+    }
+    .main-title{
+        text-align: center;
+        font-size: 32px; 
+        font-weight: 700;
+        line-height: 160%;
+        margin-bottom: 16px;
+    }
+    .tag{
+        width: 100%;
+        height: 27px;
+        border-radius: 10px 10px 0px 0px;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .tag p{
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 27px;
+        text-align: center;
+    }
+    .card{
+        padding: 0;
+        min-width: 180px;
+        height: 170px;
+    }
+    .card-top{
+        padding-bottom: 0px;
+        margin: 55px 0;
+        border-bottom: 0px;
+    }
+    .card-top h3{
+        font-size: 24px;
+        color: #1C4F92;
+    }
+    .card-top span{
+        font-size: 16px;
+    }
+    /* 隱藏前面的紅色勾勾icon */
+    .card-content p::before{
+        display: none;
+    }
+
+    /* 小卡跟灰線距離 */
+    .card-area{
+        position: relative;
+        padding-bottom: 32px;
+    }
+    /* 小卡下方灰線 */
+    .card-area::after{
+        content: '';
+        background-color: #ccc;
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+
+    .main-container{
+        flex-direction: column;
+        margin-bottom: 32px;
+        gap: 16px;
+    }
+    /* --------------------- */
+    .extra{
+        margin: 0 auto;
+        width: 396px;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* 隱藏卡片下方內容 */
+    .card-content{
+        display: none;
+    }
+    /* 隱藏商業會員 */
+    .b-card-area{
+        display: none;
+    }
+
+    /* btn */
+    .btn{
+        width: 400px;
+    }
+    .submit-area .btn-area{
+        flex-direction: column;
+        gap: 16px;
+    }
+    .submit-area{
+        gap: 16px;
+        padding-bottom: 24px;
+    }
+}
+
+@media screen and (max-width: 430px){
+    .wrapper{
+        padding: 24px 6px;
+    }
+    .breadcrumb{
+        margin-left: 0;
+        padding: 0 20px;
+    }
+    .main-title{
+        font-size: 20px; 
+        margin: 24px 0px;
+    }
+    .card-area{
+        gap: 16px;
+        width: 100%;
+    }
+    .extra{
+        width: 95%;
+    }
+    .btn-area{
+        width: 100%;
+    }
+    .btn{
+        width: 100%;
+    }
+}
+/* ------------------ Member-levle-RWD End ------------------ */
+
+
