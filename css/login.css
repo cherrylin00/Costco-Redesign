@@ -449,8 +449,10 @@ header {
     font-size: 12px;
     color: #545454;
 }
-.breadcrumb-item a:hover{
+.breadcrumb-item a:hover {
     color: #1C4F92;
+    /*  */
+    transition: all 0.3s ease-in-out; /* 新增過渡效果 */
 }
 
 /* main */
@@ -482,6 +484,8 @@ header {
 .main .picture-area img{
     width: 500px;
     border-radius: 10px;
+    /*  */
+    transition: transform 0.3s ease-in-out; /* 新增過渡效果 */
 }
 
 /* 大標 */
@@ -506,7 +510,7 @@ header {
     margin-bottom: 40px;
 }
 .form-group {
-
+    transition: transform 0.3s ease-in-out; /* 新增過渡效果 */
 }
 
 /* 標題 */
