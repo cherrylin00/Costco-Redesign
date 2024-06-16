@@ -159,7 +159,8 @@ header {
     width: 1440px;
     height: 450px;
     position: absolute;
-    left: -100%;
+    left: -450px;
+    
     top: 93px;
     z-index: 5;
     background-color: #fff;
