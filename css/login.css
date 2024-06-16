@@ -7,23 +7,22 @@ body {
     line-height: 160%;
     letter-spacing: 0.5px;
     color: #161616;
-    height: 100vh; /* 確保這行被正確應用 */
-    overflow: hidden; /* 確保這行被正確應用 */
-    min-height: 100vh; /* 確保這行被正確應用 */
+    /* height: 100vh; 
+    overflow: hidden; 
+    min-height: 100vh;  */
 }
 
 /* ------------------ Login Start ------------------ */
 .wrapper{
-    /* width: 100%;
-    padding: 10px;
-
-    outline: 1px solid #0073A6; */
-    width: 100%;
+    outline: 1px solid blue;
+    width: 1440px;
+    height: 900px;
     padding: 40px 100px 55px 100px;
 }
 /* 麵包屑 */
 .breadcrumb-area{
-    width: 100%;
+    /* width: 100%; */
+    margin-bottom: 30px;
 }
 .breadcrumb{
     display: flex;
@@ -55,25 +54,19 @@ body {
 
 /* main */
 .main{
-    /* max-width: 1280px;
-    margin: 0 auto; */
-    /* padding: 40px 80px 55px 80px; */
-    /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-
-    outline: 1px solid green; */
-    width: 100%
-
+    width: 1240px ;
+    margin: 0 auto;
+    /* height: 792px; */
 }
 .main-container{
     /* padding: 10px 80px; */
+    /* padding: 10px 0px; */
+    margin: 0 auto;
+    padding-left: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-left: 60px;
+    /* padding-left: 60px; */
     gap: 80px;
 
     outline: 1px solid red;
@@ -84,6 +77,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    outline: 1px solid purple;
+
 }
 .main .login-area{
     display: flex;
@@ -91,10 +87,13 @@ body {
     align-items: center;
     justify-content: center;
     flex: 1;
+
+    outline: 1px solid orange;
+
 }
 .main .picture-area img{
-    width: 100%;
     width: 500px;
+    height: 700px;
     border-radius: 10px;
 }
 
@@ -108,33 +107,46 @@ body {
 }
 .login-area{
     display: flex;
-    gap: 10px;
+    /* gap: 10px; */
+    gap: 40px;
 }
 .login{
-    padding: 10px 0px;
+    /* padding: 10px 0px; */
+
+    /* outline: 1px solid yellowgreen; */
+}
+.login-content{
+    /* display: flex;
+    gap: 101px; */
 }
 
 
 
 /* 輸入框 */
-form {
+.login-form {
     display: flex;
     flex-direction: column;
+    gap: 24px;
+
+    margin-bottom: 40px;
 }
 .form-group {
-    margin-bottom: 24px;
+    /* margin-bottom: 24px; */
+    outline: 1px solid pink;
 }
 
 /* 標題 */
-.form-group label {
+/* .form-group label {
     font-size: 18px;
     color: #161616;
     line-height: 160%;
     letter-spacing: 0.5px;
-}
+} */
 .form-group input[type="email"],
 .form-group input[type="password"] {
-    width: 100%;
+    /*  */
+    /* width: 100%; */
+    width: 500px;
     height: 50px;
     padding: 12px 24px;
     border: 1px solid #ccc;
@@ -147,7 +159,9 @@ form {
 }
 .password-group {
     position: relative;
-    width: 100%;
+    /*  */
+    /* width: 100%; */
+    width: 500px;
 }
 
 .password-group input[type="password"] {
@@ -195,25 +209,49 @@ form {
     font-size: 16px;
 }
 .checkbox-group label {
-    font-size: 18px;
+    font-size: 20px;
     color: #161616;
 }
+
+
+/* 網頁按鈕樣式 */
+.btn{
+    /*  */
+    /* max-width: 500px; */
+    width: 500px;
+    height: 50px;
+    background-color: #1C4F92;
+    border: 0;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+}
+.btn:hover{
+    background-color: #153B6E;
+}
+.login-btn{
+    margin-bottom: 39px;
+}
+
+
+
 /* 忘記密碼 */
 .forgotcode{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    padding: 0px 10px;
-    margin-bottom: 24px;
+    /* justify-content: space-evenly; */
+    justify-content: center;
+    /* padding: 0px 10px; */
+    /* margin-bottom: 24px; */
+    gap: 20px;
 }
-.forgotcode li{
-    padding: 10px;
-    /* position: relative; */
+.forgotcode li {
+    padding: 0; 
 }
-.forgotcode li .line{
-    width: 1px ;
-    height: 18px;
-    background-color: #545454;
+
+.forgotcode li a {
+    padding: 10px; 
 }
 .forgotcode li a{
     text-decoration: none;
@@ -228,35 +266,25 @@ form {
 
 /* 分隔線 */
 .login-area .line{
-    width: 100%;
+    /*  */
+    /* width: 100%; */
+    width: 600px;
     height: 1px;
     background-color: #ccc;
-    margin: 20px 0px;
+    /* margin: 20px 0px; */
 }
 /* 立即線上辦卡 */
 .apply{
-    padding: 10px 0;
+    outline: 1px solid red;
+    /* padding: 10px 0; */
 }
 
-/* 網頁按鈕樣式 */
-.btn{
-    width: 500px;
-    height: 50px;
-    background-color: #1C4F92;
-    border: 0;
-    border-radius: 8px;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 700;
-}
-.btn:hover{
-    background-color: #153B6E;
-}
+
 /* ------------------ Login End ------------------ */
 
 /* ------------------ Login-RWD Start ------------------ */
  
-@media screen and (max-width:1240px){
+/* @media screen and (max-width:1240px){
     .main{
         width: 100%;
         padding: 40px 60px 55px 60px;
@@ -268,9 +296,9 @@ form {
         width: 100%;
         max-width: 500px;
         min-width: 400px;
-    }
+    } */
     /* 大標 */
-    .login-area .main-title{
+    /* .login-area .main-title{
         font-size: 32px; 
         line-height: 0;
     }
@@ -281,8 +309,8 @@ form {
         width: 375px;
         height: 525px;
     }
-}
-@media screen and (max-width:1024px){
+} */
+/* @media screen and (max-width:1024px){
     .main{
         padding: 40px 30px 55px 30px;
     }  
@@ -299,9 +327,9 @@ form {
     }
     .forgotcode{
         margin-bottom: 0px;
-    }
+    } */
     /* 輸入框距離 */
-    .form-group{
+    /* .form-group{
         margin-bottom: 20px;
     }
     .login{
@@ -311,6 +339,6 @@ form {
         display: flex;
         gap: 20px;
     }
-}
+} */
 
 /* ------------------ Login-RWD End ------------------ */
