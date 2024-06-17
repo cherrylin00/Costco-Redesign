@@ -1,5 +1,3 @@
-@import url(../css/reset.css);
-
 body {
     font-size: 16px;
     font-family: 'Noto Sans TC', sans-serif;
@@ -7,14 +5,9 @@ body {
     line-height: 160%;
     letter-spacing: 0.5px;
     color: #161616;
-    /* height: 100vh; 
-    overflow: hidden; 
-    min-height: 100vh;  */
     height: 100%;
-    /* overflow: hidden; */
 }
 
-/* ------------------ Header Start ------------------ */
 header {
     width: 100%;
 }
@@ -23,7 +16,6 @@ header {
     max-width: 1280px;
 }
 
-/* Top-bar */
 .top-bar {
     background-color: #0073A6;
     padding: 5px 80px;
@@ -40,8 +32,6 @@ header {
     align-items: center;
 }
 
-
-/* EN */
 .top-bar ol li a {
     text-decoration: none;
     color: #FFF;
@@ -55,7 +45,6 @@ header {
     color: #D7D7D7;
 }
 
-/* 地球&info */
 .top-bar ol li a i {
     color: #FFF;
     font-size: 24px;
@@ -64,17 +53,12 @@ header {
 }
 .top-bar ol li a i:hover{
     color: #D7D7D7;
-
-
 }
 
-/* 中間 */
 .header-main {
     background-color: #fff;
     padding: 25px 80px;
-    /*  */
     position: relative;
-
 }
 
 .header-main .container {
@@ -82,8 +66,6 @@ header {
     justify-content: space-between;
     align-items: center;
     gap: 89px;
-
-
 }
 
 .header-main .container .ham-logo {
@@ -91,14 +73,12 @@ header {
     align-items: center;
 }
 
-/* 漢堡icon */
 .header-main .container .ham-logo .bi-list {
     color: #0073A6;
     font-size: 30px;
     margin-right: 25px;
 }
 
-/* logo圖 */
 .header-main .logo {
     background-image: url('../img/logo.png');
     background-size: contain;
@@ -108,7 +88,6 @@ header {
     height: 90px;
 }
 
-/* 主選單 */
 .header-main .container .main-nav {
     display: flex;
     align-items: center;
@@ -156,60 +135,53 @@ header {
     transition: all 0.5s ease-in-out;
 }
 
-
-
-/* 下拉選單 */
-.dropdown{
+.dropdown {
     display: flex;
-    width: 1440px;
+    width: 100%;
+    max-width: 1440px;
     height: 450px;
     position: absolute;
     left: -450px;
-    
     top: 93px;
     z-index: 5;
     background-color: #fff;
-
     display: none;
 }
 
-/* 懸停在第一個 li 時顯示下拉菜單 */
 .main-nav ol li:hover .dropdown {
     display: flex;
     justify-content: space-between;
 }
 
-.dropdown-items{
+.dropdown-items {
     display: flex;
     flex-direction: column;
     flex: 40%;
-
     padding: 20px 0px 20px 80px;
-
 }
-.dropdown-img{
+.dropdown-img {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
     background-color: #E8EDF4;
     flex: 60%;
     padding: 20px 10px;
 }
-.dropdown-img h6{
+.dropdown-img h6 {
     align-self: flex-start;
     font-size: 18px;
     font-weight: 700;
     color: #161616;
     margin-bottom: 15px;
 }
-.dropdown-img img{
-    width: 683px;
+.dropdown-img img {
+    width: 100%;
+    max-width: 683px;
     height: 268px;
 }
 
-.dropdown-items h2{
+.dropdown-items h2 {
     color: #1C4F92;
     font-size: 32px;
     font-weight: 700;
@@ -217,33 +189,21 @@ header {
 }
 .dropdown-items .items {
     display: flex;
-    /* flex: 1 0 30%; */
     flex: 1;
-
-
     flex-direction: column;
     gap: 20px;
-
 }
-
-.dropdown-items .items p{
+.dropdown-items .items p {
     font-size: 18px;
     font-weight: 500;
     line-height: 160%;
     padding: 10px;
-
 }
-
-.dropdown-items .items p a{
+.dropdown-items .items p a {
     color: #545454;
     text-decoration: none;
 }
 
-
-/* 下拉選單結束 */
-
-
-/* 特殊 */
 .header-main .container-d {
     display: flex;
     align-self: center;
@@ -252,7 +212,6 @@ header {
     display: none;
 }
 
-/* icon-nav */
 .icon-nav {
     display: flex;
     justify-content: flex-end;
@@ -261,8 +220,6 @@ header {
 .icon-nav ol {
     list-style: none;
     display: flex;
-    /* align-items: center;
-    justify-content: center; */
     gap: 24px;
 }
 
@@ -287,12 +244,11 @@ header {
     color: #0073A6;
 }
 
-/* 特殊 */
 .icon-nav ol li .bi-cart {
     position: relative;
 }
 .icon-nav ol li .bi-cart::after {
-    content: '2'; /* 這裡設置通知數字 */
+    content: '2';
     position: absolute;
     top: -10px;
     right: -10px;
@@ -311,11 +267,11 @@ header {
 .icon-nav ol li:nth-child(5) {
     display: none;
 }
-/* 最新消息 */
+
 .news {
     background-color: #EFEFEF;
     padding: 4px 80px;
-    z-index: 1; /* 保證在下拉菜單之下 */
+    z-index: 1;
 }
 
 .news p a {
@@ -326,64 +282,63 @@ header {
     justify-content: center;
 }
 
-@media screen and (max-width:1400px) {
+@media screen and (max-width: 1400px) {
     .header-main .container {
         gap: 20px;
-        transition: all 0.3s ease; /* 添加過渡效果 */
+        transition: all 0.3s ease;
     }
 }
 
-@media screen and (max-width:1240px) {
+@media screen and (max-width: 1240px) {
     .header-main .container .main-nav {
         display: none;
-        transition: all 0.3s ease; /* 添加過渡效果 */
+        transition: all 0.3s ease;
     }
     .header-main .container-d {
         display: flex;
         border-top: 1px solid #ccc;
-        transition: all 0.3s ease; /* 添加過渡效果 */
+        transition: all 0.3s ease;
     }
     .header-main .container-d .main-nav-d {
         display: flex;
-        transition: all 0.3s ease; /* 添加過渡效果 */
+        transition: all 0.3s ease;
     }
     header .container {
         width: 100%;
-        transition: all 0.3s ease; /* 添加過渡效果 */
+        transition: all 0.3s ease;
     }
     .top-bar {
         padding: 5px 24px;
-        transition: all 0.3s ease; /* 添加過渡效果 */
+        transition: all 0.3s ease;
     }
     .header-main {
         padding: 25px 24px 0px 24px;
-        transition: all 0.3s ease; /* 添加過渡效果 */
+        transition: all 0.3s ease;
     }
     .news {
         padding: 4px 24px;
-        transition: all 0.3s ease; /* 添加過渡效果 */
+        transition: all 0.3s ease;
     }
-    .dropdown{
+    .dropdown {
         flex-direction: column;
         gap: 30px;
     }
-    .dropdown-items{
+    .dropdown-items {
         padding: 30px 80px;
     }
-    .dropdown-img{
+    .dropdown-img {
         padding: 30px 80px;
     }
 }
 
-@media screen and (max-width:768px) {
-    .top-bar{
+@media screen and (max-width: 768px) {
+    .top-bar {
         display: none;
     }
     .header-main .logo {
         width: 135px;
         height: 35px;
     }
-    /* 左邊漢堡icon */
     .header-main .container .ham-logo .bi-list {
         display: none;
     }
@@ -391,7 +346,7 @@ header {
         display: flex;
         color: #545454;
     }
-    .icon-nav ol{
+    .icon-nav ol {
         gap: 15px;
     }
     .header-main {
@@ -402,31 +357,28 @@ header {
     }
 }
 
-@media screen and (max-width:430px){
+@media screen and (max-width: 430px) {
     .header-main {
         padding: 25px 12px 25px 12px;
     }
-    .news{
+    .news {
         display: none;
     }
-    .icon-nav ol{
+    .icon-nav ol {
         gap: 12px;
     }
-} 
+}
 
-
-
-/* ------------------ Login Start ------------------ */
-.wrapper{
+.wrapper {
     width: 100%;
     padding: 40px 0px 55px 0px;
 }
-/* 麵包屑 */
-.breadcrumb-area{
+
+.breadcrumb-area {
     padding-left: 50px;
     margin-bottom: 30px;
 }
-.breadcrumb{
+.breadcrumb {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -434,103 +386,84 @@ header {
     list-style: none;
     background-color: #fff;
 }
-.breadcrumb-item{
+.breadcrumb-item {
     display: flex;
     align-items: center;
 }
-.breadcrumb-item:not(:last-child):after{
+.breadcrumb-item:not(:last-child):after {
     content: '\F285';
     font-family: 'Bootstrap-Icons';
     font-size: 12px;
     display: inline-block;
     padding: 0 10px;
 }
-.breadcrumb-item a{
+.breadcrumb-item a {
     text-decoration: none;
     font-size: 12px;
     color: #545454;
 }
 .breadcrumb-item a:hover {
     color: #1C4F92;
-    /*  */
-    transition: all 0.3s ease-in-out; /* 新增過渡效果 */
+    transition: all 0.3s ease-in-out;
 }
 
-/* main */
-.main{
+.main {
     max-width: 1240px;
     margin: 0 auto;
 }
-.main-container{
+.main-container {
     max-width: 1180px;
     overflow: hidden;
-    /* padding-left: 60px; */
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.main .picture-area{
-    /* flex: 1; */
+.main .picture-area {
     flex: 40%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.main .login-area{
+.main .login-area {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* flex: 1; */
     flex: 40%;
-
 }
-.main .picture-area img{
-    width: 400px;
-
+.main .picture-area img {
+    width: 100%;
+    max-width: 400px;
     border-radius: 10px;
-    /*  */
-    transition: transform 0.3s ease-in-out; /* 新增過渡效果 */
+    transition: transform 0.3s ease-in-out;
 }
 
-/* 大標 */
-.login-area .main-title{
+.login-area .main-title {
     text-align: center;
-    font-size: 40px; 
+    font-size: 40px;
     font-weight: 700;
     line-height: 160%;
     margin-bottom: 40px;
 }
-.login-area{
+.login-area {
     display: flex;
     gap: 40px;
 }
 
-/* 輸入框 */
 .login-form {
     display: flex;
     flex-direction: column;
     gap: 24px;
-
     margin-bottom: 40px;
 }
 .form-group {
-    transition: transform 0.3s ease-in-out; /* 新增過渡效果 */
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
 }
 
-/* 標題 */
-/* .form-group label {
-    font-size: 18px;
-    color: #161616;
-    line-height: 160%;
-    letter-spacing: 0.5px;
-} */
 .form-group input[type="email"],
 .form-group input[type="password"] {
-    /*  */
     width: 100%;
-    /* width: 500px; */
-    max-width: 500px;
     height: 50px;
     padding: 12px 24px;
     border: 1px solid #ccc;
@@ -543,11 +476,10 @@ header {
 }
 .password-group {
     position: relative;
-    width: 500px;
+    width: 100%;
 }
 
 .password-group input[type="password"] {
-    width: 100%;
     padding-right: 40px;
 }
 .password-group i.bi-eye {
@@ -559,7 +491,6 @@ header {
     color: #888;
 }
 
-/* checkbox */
 .checkbox-group {
     display: flex;
     align-items: center;
@@ -595,11 +526,8 @@ header {
     color: #161616;
 }
 
-
-/* 網頁按鈕樣式 */
-.btn{
+.btn {
     width: 100%;
-    min-width: 500px;
     height: 50px;
     background-color: #1C4F92;
     border: 0;
@@ -607,61 +535,58 @@ header {
     color: #fff;
     font-size: 18px;
     font-weight: 700;
+    box-sizing: border-box;
 }
-.btn:hover{
+.btn:hover {
     background-color: #153B6E;
 }
-.login-btn{
+.login-btn {
     margin-bottom: 39px;
 }
 
-
-
-/* 忘記密碼 */
-.forgotcode{
+.forgotcode {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
 }
 .forgotcode li {
-    padding: 0; 
+    padding: 0;
 }
-
 .forgotcode li a {
-    padding: 10px; 
+    padding: 10px;
 }
-.forgotcode li a{
+.forgotcode li a {
     text-decoration: none;
     color: #545454;
     font-size: 18px;
     line-height: 160%;
     letter-spacing: 0.5px;
 }
-.forgotcode li a:hover{
+.forgotcode li a:hover {
     color: #0073A6;
 }
 
-/* 分隔線 */
-.login-area .line{
+.login-area .line {
     width: 100%;
-    max-width: 600px;
     height: 1px;
     background-color: #ccc;
 }
-/* 立即線上辦卡 */
-.apply{
-
+.applybtn {
+    width: 100%;
+    height: 50px; /* 與 .login-btn 相同的高度 */
+    background-color: #1C4F92; /* 與 .login-btn 相同的背景色 */
+    border: 0;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    box-sizing: border-box;
+    display: block; /* 確保按鈕是塊級元素 */
+    margin: 0 auto; /* 確保按鈕在父容器內居中 */
+    max-width: 500px; /* 限制最大寬度 */
 }
 
-
-/* ------------------ Login End ------------------ */
-
-
-
-/* ------------------ Login-RWD Start ------------------ */
-
-/* For devices with a screen width of 1240px or less */
 @media screen and (max-width: 1240px) {
     .breadcrumb-area {
         padding-left: 30px;
@@ -670,9 +595,12 @@ header {
         width: 100%;
         padding: 40px 0px 55px 0px;
     }
-    .btn {
-        width: 100%;
+    /* .btn {
         max-width: 500px;
+    } */
+    .btn, .applybtn, .login-btn {
+        width: 100%;
+        max-width: 500px; /* 與.btn和.login-btn相同的寬度 */
     }
     .login-area .main-title {
         font-size: 32px;
@@ -681,12 +609,10 @@ header {
         margin-bottom: 16px;
     }
     .main .picture-area img {
-        width: 100%;
         max-width: 375px;
     }
     .form-group input[type="email"],
     .form-group input[type="password"] {
-        width: 100%;
         min-width: 400px;
     }
     .login-form {
@@ -694,7 +620,6 @@ header {
         margin-bottom: 20px;
     }
 }
-
 
 @media screen and (max-width: 1024px) {
     .main-container {
@@ -708,25 +633,22 @@ header {
     .btn {
         max-width: 400px;
     }
-    
     .forgotcode {
-
         gap: 10px;
     }
     .form-group {
         margin-bottom: 20px;
     }
-    .breadcrumb-area{
+    .breadcrumb-area {
         margin-bottom: 24px;
     }
-    .login-area{
+    .login-area {
         gap: 20px;
     }
     .login-form {
         gap: 16px;
         margin-bottom: 20px;
     }
-
 }
 
 @media screen and (max-width: 940px) {
@@ -735,18 +657,14 @@ header {
     }
     .main {
         width: 100%;
-        padding: 20px 12px 35px 12px;
         padding: 20px 0px 35px 0px;
-
     }
     .main-container {
         padding: 10px 12px;
         gap: 10px;
     }
     .breadcrumb-area {
-        /* padding-left: 10px; */
         padding-left: 20px;
-
     }
     .main .picture-area {
         display: none;
@@ -756,18 +674,13 @@ header {
         margin-bottom: 20px;
     }
     .form-group input[type="email"],
-    .form-group input[type="password"]{
-        /* width: 100%; */
-        /* width: 400px; */
-        width: 100%;
+    .form-group input[type="password"] {
         min-width: 400px;
-        /* max-width: 400px; */
     }
     .checkbox-group label {
         font-size: 16px;
     }
     .forgotcode {
-        /* flex-direction: column; */
         gap: 5px;
     }
     .login-area {
@@ -777,60 +690,49 @@ header {
         font-size: 18px;
     }
     .btn {
-        width: 100%;
-        max-width: 0px;
+        max-width: 300px;
+    }
+    .login-area .line {
+        width: 60%;
     }
 }
+
 @media screen and (max-width: 430px) {
     .breadcrumb-area {
-        /* padding-left: 10px; */
         padding-left: 0px;
     }
     .main {
         padding: 20px 12px 35px 12px;
-        box-sizing: border-box; /* 確保內邊距和邊框包含在寬度內 */
-
+        box-sizing: border-box;
     }
     .main-container {
         width: 100%;
-        outline: 1px solid red;
         padding: 0px;
         gap: 24px;
-
-        box-sizing: border-box; /* 確保內邊距和邊框包含在寬度內 */
-        
+        box-sizing: border-box;
     }
-    .login{
-    
-        gap: 16px;
-        box-sizing: border-box; /* 確保內邊距和邊框包含在寬度內 */
-
-    }
-    .form-group{
+    .login-area .line {
         width: 100%;
-        outline: 1px solid green;
-        outline: 1px solid pink;
-        box-sizing: border-box; /* 確保內邊距和邊框包含在寬度內 */
-
-
     }
-    .login-form{
-        width: 90%;
-        outline: 1px solid pink;
-        box-sizing: border-box; /* 確保內邊距和邊框包含在寬度內 */
+    .login-area {
+        gap: 16px;
+        box-sizing: border-box;
+    }
+    .form-group {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .login-form {
+        width: 100%;
+        box-sizing: border-box;
     }
     .form-group input[type="email"],
-    .form-group input[type="password"]{
+    .form-group input[type="password"] {
         width: 100%;
-        box-sizing: border-box; /* 確保內邊距和邊框包含在寬度內 */
-
+        box-sizing: border-box;
     }
-    .btn {
-        width: 100%
+    .login-btn {
+        width: 100%;
+        box-sizing: border-box
     }
 }
-
-
-
-
-/* ------------------ Login-RWD End ------------------ */
