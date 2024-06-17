@@ -220,6 +220,7 @@ header {
     /* flex: 1 0 30%; */
     flex: 1;
 
+
     flex-direction: column;
     gap: 20px;
 
@@ -463,13 +464,14 @@ header {
 .main-container{
     max-width: 1180px;
     overflow: hidden;
-    padding-left: 60px;
+    /* padding-left: 60px; */
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .main .picture-area{
-    flex: 1;
+    /* flex: 1; */
+    flex: 40%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -479,10 +481,13 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex: 1;
+    /* flex: 1; */
+    flex: 40%;
+
 }
 .main .picture-area img{
-    width: 500px;
+    width: 400px;
+
     border-radius: 10px;
     /*  */
     transition: transform 0.3s ease-in-out; /* 新增過渡效果 */
@@ -523,8 +528,9 @@ header {
 .form-group input[type="email"],
 .form-group input[type="password"] {
     /*  */
-    /* width: 100%; */
-    width: 500px;
+    width: 100%;
+    /* width: 500px; */
+    max-width: 500px;
     height: 50px;
     padding: 12px 24px;
     border: 1px solid #ccc;
@@ -592,7 +598,8 @@ header {
 
 /* 網頁按鈕樣式 */
 .btn{
-    width: 500px;
+    width: 100%;
+    min-width: 500px;
     height: 50px;
     background-color: #1C4F92;
     border: 0;
@@ -637,7 +644,8 @@ header {
 
 /* 分隔線 */
 .login-area .line{
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
     height: 1px;
     background-color: #ccc;
 }
@@ -649,63 +657,180 @@ header {
 
 /* ------------------ Login End ------------------ */
 
+
+
 /* ------------------ Login-RWD Start ------------------ */
- 
-/* @media screen and (max-width:1240px){
-    .main{
-        width: 100%;
-        padding: 40px 60px 55px 60px;
-    }  
-    .breadcrumb{
-        width: 100%
+
+/* For devices with a screen width of 1240px or less */
+@media screen and (max-width: 1240px) {
+    .breadcrumb-area {
+        padding-left: 30px;
     }
-    .btn{
+    .main {
+        width: 100%;
+        padding: 40px 0px 55px 0px;
+    }
+    .btn {
         width: 100%;
         max-width: 500px;
-        min-width: 400px;
-    } */
-    /* 大標 */
-    /* .login-area .main-title{
-        font-size: 32px; 
-        line-height: 0;
     }
-    .forgotcode{
+    .login-area .main-title {
+        font-size: 32px;
+    }
+    .forgotcode {
         margin-bottom: 16px;
     }
-    .main .picture-area img{
-        width: 375px;
-        height: 525px;
+    .main .picture-area img {
+        width: 100%;
+        max-width: 375px;
     }
-} */
-/* @media screen and (max-width:1024px){
-    .main{
-        padding: 40px 30px 55px 30px;
-    }  
-    .main-container{
-        padding: 10px 0px;
-        gap: 60px;
+    .form-group input[type="email"],
+    .form-group input[type="password"] {
+        width: 100%;
+        min-width: 400px;
     }
-    .main .picture-area img{
-        width: 375px;
-        height: 525px;
-    }
-    .btn{
-        max-width: 400px;
-    }
-    .forgotcode{
-        margin-bottom: 0px;
-    } */
-    /* 輸入框距離 */
-    /* .form-group{
+    .login-form {
+        gap: 16px;
         margin-bottom: 20px;
     }
-    .login{
-        padding: 0px;
-    }
-    .login-area{
-        display: flex;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .main-container {
+        align-items: center;
+        padding: 20px;
         gap: 20px;
     }
-} */
+    .main .picture-area img {
+        min-width: 250px;
+    }
+    .btn {
+        max-width: 400px;
+    }
+    
+    .forgotcode {
+
+        gap: 10px;
+    }
+    .form-group {
+        margin-bottom: 20px;
+    }
+    .breadcrumb-area{
+        margin-bottom: 24px;
+    }
+    .login-area{
+        gap: 20px;
+    }
+    .login-form {
+        gap: 16px;
+        margin-bottom: 20px;
+    }
+
+}
+
+@media screen and (max-width: 940px) {
+    .wrapper {
+        padding: 20px 0px 25px 0px;
+    }
+    .main {
+        width: 100%;
+        padding: 20px 12px 35px 12px;
+        padding: 20px 0px 35px 0px;
+
+    }
+    .main-container {
+        padding: 10px 12px;
+        gap: 10px;
+    }
+    .breadcrumb-area {
+        /* padding-left: 10px; */
+        padding-left: 20px;
+
+    }
+    .main .picture-area {
+        display: none;
+    }
+    .login-area .main-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    .form-group input[type="email"],
+    .form-group input[type="password"]{
+        /* width: 100%; */
+        /* width: 400px; */
+        width: 100%;
+        min-width: 400px;
+        /* max-width: 400px; */
+    }
+    .checkbox-group label {
+        font-size: 16px;
+    }
+    .forgotcode {
+        /* flex-direction: column; */
+        gap: 5px;
+    }
+    .login-area {
+        gap: 20px;
+    }
+    .checkbox-group label {
+        font-size: 18px;
+    }
+    .btn {
+        width: 100%;
+        max-width: 0px;
+    }
+}
+@media screen and (max-width: 430px) {
+    .breadcrumb-area {
+        /* padding-left: 10px; */
+        padding-left: 0px;
+    }
+    .main {
+        padding: 20px 12px 35px 12px;
+        box-sizing: border-box; /* 確保內邊距和邊框包含在寬度內 */
+
+    }
+    .main-container {
+        width: 100%;
+        outline: 1px solid red;
+        padding: 0px;
+        gap: 24px;
+
+        box-sizing: border-box; /* 確保內邊距和邊框包含在寬度內 */
+        
+    }
+    .login{
+    
+        gap: 16px;
+        box-sizing: border-box; /* 確保內邊距和邊框包含在寬度內 */
+
+    }
+    .form-group{
+        width: 100%;
+        outline: 1px solid green;
+        outline: 1px solid pink;
+        box-sizing: border-box; /* 確保內邊距和邊框包含在寬度內 */
+
+
+    }
+    .login-form{
+        width: 90%;
+        outline: 1px solid pink;
+        box-sizing: border-box; /* 確保內邊距和邊框包含在寬度內 */
+    }
+    .form-group input[type="email"],
+    .form-group input[type="password"]{
+        width: 100%;
+        box-sizing: border-box; /* 確保內邊距和邊框包含在寬度內 */
+
+    }
+    .btn {
+        width: 100%
+    }
+}
+
+
+
 
 /* ------------------ Login-RWD End ------------------ */
