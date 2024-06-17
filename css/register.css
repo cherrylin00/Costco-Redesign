@@ -1,4 +1,4 @@
-@import url(/css/reset.css);
+@import url(../css/reset.css);
 
 body{
     font-size: 16px;
@@ -132,7 +132,10 @@ body{
     display: flex;
     flex-direction: column;
     /* width: 516px; */
-    width: 40%;
+    /*  */
+    width: 100%;
+    max-width: 516px;
+    /*  */
     margin: 0 auto;
     padding: 12px;
     box-sizing: border-box;
@@ -286,8 +289,8 @@ body{
 }
 @media screen and (max-width: 1024px){
     .register_section{
-        width: 456px;
-        width: 35%;
+        max-width: 456px;
+        width: 100%;
     }
     .register_main h1{
         font-size: 32px;
