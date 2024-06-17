@@ -68,7 +68,7 @@ body {
 .main .login-area {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
     flex: 40%;
 }
@@ -213,6 +213,9 @@ body {
     height: 1px;
     background-color: #ccc;
 }
+.apply{
+    width: 100%;
+}
 .applybtn {
     width: 100%;
     height: 50px; /* 與 .login-btn 相同的高度 */
@@ -241,7 +244,7 @@ body {
     } */
     .btn, .applybtn, .login-btn {
         width: 100%;
-        max-width: 500px; /* 與.btn和.login-btn相同的寬度 */
+        /* max-width: 500px; */
     }
     .login-area .main-title {
         font-size: 32px;
@@ -257,7 +260,7 @@ body {
         min-width: 400px;
     }
     .login-form {
-        gap: 16px;
+        /* gap: 16px; */
         margin-bottom: 20px;
     }
 }
@@ -272,13 +275,13 @@ body {
         min-width: 250px;
     }
     .btn {
-        max-width: 400px;
+        /* max-width: 400px; */
     }
     .forgotcode {
         gap: 10px;
     }
     .form-group {
-        margin-bottom: 20px;
+        /* margin-bottom: 20px; */
     }
     .breadcrumb-area {
         margin-bottom: 24px;
@@ -287,7 +290,7 @@ body {
         gap: 20px;
     }
     .login-form {
-        gap: 16px;
+        /* gap: 16px; */
         margin-bottom: 20px;
     }
 }
@@ -331,10 +334,11 @@ body {
         font-size: 18px;
     }
     .btn {
-        max-width: 300px;
+        /* max-width: 300px; */
     }
     .login-area .line {
-        width: 60%;
+        width: 100%;
+        margin: 0 auto;
     }
 }
 
@@ -354,6 +358,8 @@ body {
     }
     .login-area .line {
         width: 100%;
+        margin: 0 auto;
+
     }
     .login-area {
         gap: 16px;
@@ -372,8 +378,8 @@ body {
         width: 100%;
         box-sizing: border-box;
     }
-    .login-btn {
+    .btn {
         width: 100%;
-        box-sizing: border-box
+        box-sizing: border-box;
     }
 }

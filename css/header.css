@@ -67,9 +67,8 @@ header {
 /* 中間 */
 .header-main {
     background-color: #fff;
-    padding: 25px 80px;
-    /*  */
-    /* position: relative; */
+    padding: 0px 80px;
+    position: relative;
 
 }
 
@@ -121,7 +120,8 @@ header {
 
 .header-main .container .main-nav ol li {
     padding: 10px;
-    position: relative;
+    height: 120px;
+    line-height: 120px;
 }
 
 .header-main .container .main-nav ol li:not(:last-child):after {
@@ -155,7 +155,6 @@ header {
 
 /* 搜尋欄樣式 */
 .search-bar-container {
-    display: none;
     position: absolute;
     top: 176px;
     left: 0;
@@ -170,7 +169,8 @@ header {
     justify-content: center;
     padding: 50px 0px;
     gap: 10px;
-    /* opacity: 0.5; */
+    display: none;
+
 }
 
 .search-bar {
@@ -182,7 +182,6 @@ header {
     border: 1px solid #ccc;
     border-radius: 50px;
     padding: 5px 20px;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
 }
 
 .search-bar input {
@@ -241,28 +240,22 @@ header {
 }
 
 
-
 /* 下拉選單 */
 .dropdown{
     display: flex;
-    width: 100%;
+    width: 100vw;
     height: 450px;
     position: absolute;
-    /* 去跟wrapper關聯 */
     left: 0px;
-    top: calc( 209.19 - 33.59);
+    top: 100%;
     z-index: 5;
     background-color: #fff;
-
-    /* opacity: 0; */
     display: none;
 }
-
-/* 懸停在第一個 li 時顯示下拉菜單 */
-/* .header-main:hover ~ .dropdown{
+/* 新品上市hover */
+.nav-item:hover > .dropdown{
     display: flex;
-} */
-
+}
 
 .dropdown-items{
     display: flex;
@@ -306,7 +299,7 @@ header {
 }
 .dropdown-items .items {
     display: flex;
-    /* flex: 1 0 30%; */
+
     flex: 1;
 
     flex-direction: column;
@@ -349,8 +342,6 @@ header {
 .icon-nav ol {
     list-style: none;
     display: flex;
-    /* align-items: center;
-    justify-content: center; */
     gap: 24px;
 }
 
@@ -380,7 +371,7 @@ header {
     position: relative;
 }
 .icon-nav ol li .bi-cart::after {
-    content: '2'; /* 這裡設置通知數字 */
+    content: '2'; 
     position: absolute;
     top: -10px;
     right: -10px;
@@ -399,11 +390,12 @@ header {
 .icon-nav ol li:nth-child(5) {
     display: none;
 }
+
 /* 最新消息 */
 .news {
     background-color: #EFEFEF;
     padding: 4px 80px;
-    z-index: 1; /* 保證在下拉菜單之下 */
+    z-index: 1;
 
     position: relative;
 }
@@ -419,39 +411,39 @@ header {
 @media screen and (max-width:1400px) {
     .header-main .container {
         gap: 20px;
-        transition: all 0.3s ease; /* 添加過渡效果 */
+        transition: all 0.3s ease; 
     }
 }
 
 @media screen and (max-width:1240px) {
     .header-main .container .main-nav {
         display: none;
-        transition: all 0.3s ease; /* 添加過渡效果 */
+        transition: all 0.3s ease; 
     }
     .header-main .container-d {
         display: flex;
         border-top: 1px solid #ccc;
-        transition: all 0.3s ease; /* 添加過渡效果 */
+        transition: all 0.3s ease; 
     }
     .header-main .container-d .main-nav-d {
         display: flex;
-        transition: all 0.3s ease; /* 添加過渡效果 */
+        transition: all 0.3s ease; 
     }
     header .container {
         width: 100%;
-        transition: all 0.3s ease; /* 添加過渡效果 */
+        transition: all 0.3s ease; 
     }
     .top-bar {
         padding: 5px 24px;
-        transition: all 0.3s ease; /* 添加過渡效果 */
+        transition: all 0.3s ease; 
     }
     .header-main {
         padding: 25px 24px 0px 24px;
-        transition: all 0.3s ease; /* 添加過渡效果 */
+        transition: all 0.3s ease; 
     }
     .news {
         padding: 4px 24px;
-        transition: all 0.3s ease; /* 添加過渡效果 */
+        transition: all 0.3s ease; 
     }
     .dropdown{
         flex-direction: column;
