@@ -438,133 +438,7 @@ header {
 
 /* ------------------ Header End ------------------ */
 
-/* ------------------ Header RWD Start------------------ */
 
-@media screen and (max-width:1400px) {
-    .header-main .container {
-        gap: 20px;
-        transition: all 0.3s ease; 
-    }
-}
-
-@media screen and (max-width:1240px) {
-    .header-main .container .main-nav {
-        display: none;
-        transition: all 0.3s ease; 
-    }
-    .header-main .container-d {
-        display: flex;
-        border-top: 1px solid #ccc;
-        transition: all 0.3s ease; 
-    }
-    .header-main .container-d .main-nav-d {
-        display: flex;
-        flex-direction: column;
-        transition: all 0.3s ease; 
-    }
-    header .container {
-        width: 100%;
-        transition: all 0.3s ease; 
-    }
-    .top-bar {
-        padding: 5px 24px;
-        transition: all 0.3s ease; 
-    }
-    .header-main {
-        padding: 25px 24px 0px 24px;
-        transition: all 0.3s ease; 
-    }
-    .news {
-        padding: 4px 24px;
-        transition: all 0.3s ease; 
-    }
-    .dropdown{
-        flex-direction: column;
-        gap: 30px;
-    }
-    .dropdown-items{
-        padding: 30px 80px;
-    }
-    .dropdown-img{
-        padding: 30px 80px;
-    }
-    .search-bar-container {
-        top: 150px;
-    }
-}
-
-@media screen and (max-width:768px) {
-    .top-bar{
-        display: none;
-    }
-    .header-main .logo {
-        width: 135px;
-        height: 35px;
-    }
-    /* 左邊漢堡icon */
-    .header-main .container .ham-logo .bi-list {
-        display: none;
-    }
-    .icon-nav ol li .bi-list-sm {
-        display: flex;
-        color: #545454;
-    }
-    .icon-nav ol{
-        gap: 15px;
-    }
-    .header-main {
-        padding: 25px 24px 25px 24px;
-    }
-    .header-main:hover ~ .dropdown1{
-        display: none;
-    }
-    .header-main .container-d {
-        display: none;
-    }
-    .search-bar-container {     
-        top: 0;
-        align-items: flex-start;
-        padding: 10px 20px;
-    }
-    .search-bar {
-        padding: 0px 20px;
-    }
-    .search-bar input {
-        border: none;
-        outline: none;
-        width: 100%;
-        padding: 10px;
-        font-size: 16px;
-        border-radius: 50px;
-    }
-    .search-bar i {
-        margin-right: 10px;
-        font-size: 20px;
-        color: #999;
-    }
-    .search-bar-container .close-btn {
-        right: 50px;
-    }
-    .hot-keywords {
-        display: none
-    }
-}
-
-@media screen and (max-width:430px){
-    .header-main {
-        padding: 25px 12px 25px 12px;
-    }
-    .news{
-        display: none;
-    }
-    .icon-nav ol{
-        gap: 12px;
-    }
-    .search-bar-container {     
-        padding: 0px 20px;
-    }
-} 
-/* ------------------ Header RWD End------------------ */
 
 
 /*  Login-------------------------------------------------------------開始 */
@@ -817,6 +691,280 @@ header {
 }
 /* ------------------ Login End ------------------ */
 
+/*  Login-------------------------------------------------------------結束 */
+
+
+
+/* ------------------ Footer Start ------------------ */
+
+/* 整個footer */
+.footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: #0073A6;
+    margin: 0 auto;
+    padding: 25px 81px;
+}
+
+/* 左側區域 */
+.left-area{
+    width: 20%;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 49px;
+    padding-top: 10px;
+}
+
+/* logo圖 */
+.footer .logo img{
+    width: 200px;
+}
+
+/* social-media icon */
+.social-media{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+.social-media .bi{
+    font-size: 45px;
+    color:#fff;
+}
+.social-media .bi:hover{
+    font-size: 45px;
+    color:#161616;
+    transition: all 0.33s ease;
+}
+
+/* apps */
+.apps{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+.apps img{
+    max-width: 128px;
+}
+.apps li{
+    list-style: none;
+}
+.apps-icon{
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+
+    display: none;
+}
+.apps-icon .bi{
+    font-size: 24px;
+    color: #161616;
+}
+
+/* line */
+.footer .line{
+    width: 1px;
+    height: 450px;
+    background-color: #fff;
+    margin: 0 57px;
+}
+
+/* right-area */
+.right-area{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+.right-area h6{
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    padding: 10px 0;
+}
+.right-area a{
+    text-decoration: none;
+}
+
+.right-area p{
+    color: #fff;
+    font-size: 14px;
+}
+.right-area p:hover{
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+.right-area .footer-list{
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.right-area .list-item{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+/* copyright */
+.copyright{
+    background-color: #EFEFEF;
+    padding: 12px 36px;
+}
+.copyright p{
+    color: #545454;
+    font-size: 12px;
+    text-align: center;
+}
+
+.copyright p:nth-child(2){
+    display: none;
+}
+.copyright span{
+    color: #478E8F;
+}
+.tibame{
+    padding: 0 36px;
+    background-color: #EFEFEF;
+}
+.tibame p{
+    font-size: 12px;
+    color: #161616;
+    text-align: center;
+    font-weight: 700;
+    padding: 10px 0px;
+}
+/* ------------------ Footer End ------------------ */
+
+/* ------------------ Header RWD Start------------------ */
+
+@media screen and (max-width:1400px) {
+    .header-main .container {
+        gap: 20px;
+        transition: all 0.3s ease; 
+    }
+}
+
+@media screen and (max-width:1240px) {
+    .header-main .container .main-nav {
+        display: none;
+        transition: all 0.3s ease; 
+    }
+    .header-main .container-d {
+        display: flex;
+        border-top: 1px solid #ccc;
+        transition: all 0.3s ease; 
+    }
+    .header-main .container-d .main-nav-d {
+        display: flex;
+        flex-direction: column;
+        transition: all 0.3s ease; 
+    }
+    header .container {
+        width: 100%;
+        transition: all 0.3s ease; 
+    }
+    .top-bar {
+        padding: 5px 24px;
+        transition: all 0.3s ease; 
+    }
+    .header-main {
+        padding: 25px 24px 0px 24px;
+        transition: all 0.3s ease; 
+    }
+    .news {
+        padding: 4px 24px;
+        transition: all 0.3s ease; 
+    }
+    .dropdown{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .dropdown-items{
+        padding: 30px 80px;
+    }
+    .dropdown-img{
+        padding: 30px 80px;
+    }
+    .search-bar-container {
+        top: 150px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .top-bar{
+        display: none;
+    }
+    .header-main .logo {
+        width: 135px;
+        height: 35px;
+    }
+    /* 左邊漢堡icon */
+    .header-main .container .ham-logo .bi-list {
+        display: none;
+    }
+    .icon-nav ol li .bi-list-sm {
+        display: flex;
+        color: #545454;
+    }
+    .icon-nav ol{
+        gap: 15px;
+    }
+    .header-main {
+        padding: 25px 24px 25px 24px;
+    }
+    .header-main:hover ~ .dropdown1{
+        display: none;
+    }
+    .header-main .container-d {
+        display: none;
+    }
+    .search-bar-container {     
+        top: 0;
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+    .search-bar {
+        padding: 0px 20px;
+    }
+    .search-bar input {
+        border: none;
+        outline: none;
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 50px;
+    }
+    .search-bar i {
+        margin-right: 10px;
+        font-size: 20px;
+        color: #999;
+    }
+    .search-bar-container .close-btn {
+        right: 50px;
+    }
+    .hot-keywords {
+        display: none
+    }
+}
+
+@media screen and (max-width:430px){
+    .header-main {
+        padding: 25px 12px 25px 12px;
+    }
+    .news{
+        display: none;
+    }
+    .icon-nav ol{
+        gap: 12px;
+    }
+    .search-bar-container {     
+        padding: 0px 20px;
+    }
+} 
+/* ------------------ Header RWD End------------------ */
 
 /* ------------------ Login-RWD Start ------------------ */
 
@@ -974,155 +1122,6 @@ header {
 }
 
 /* ------------------ Login-RWD End ------------------ */
-
-
-/*  Login-------------------------------------------------------------結束 */
-
-
-
-/* ------------------ Footer Start ------------------ */
-
-/* 整個footer */
-.footer{
-    display: flex;
-    justify-content: space-between;
-    background-color: #0073A6;
-    margin: 0 auto;
-    padding: 25px 81px;
-}
-
-/* 左側區域 */
-.left-area{
-    width: 20%;
-    min-width: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 49px;
-    padding-top: 10px;
-}
-
-/* logo圖 */
-.footer .logo img{
-    width: 200px;
-}
-
-/* social-media icon */
-.social-media{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 32px;
-}
-.social-media .bi{
-    font-size: 45px;
-    color:#fff;
-}
-.social-media .bi:hover{
-    font-size: 45px;
-    color:#161616;
-    transition: all 0.33s ease;
-}
-
-/* apps */
-.apps{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-}
-.apps img{
-    max-width: 128px;
-}
-.apps li{
-    list-style: none;
-}
-.apps-icon{
-    align-items: center;
-    justify-content: center;
-    gap: 32px;
-
-    display: none;
-}
-.apps-icon .bi{
-    font-size: 24px;
-    color: #161616;
-}
-
-/* line */
-.footer .line{
-    width: 1px;
-    height: 450px;
-    background-color: #fff;
-    margin: 0 57px;
-}
-
-/* right-area */
-.right-area{
-    width: 70%;
-    display: flex;
-    justify-content: space-between;
-}
-.right-area h6{
-    font-size: 18px;
-    font-weight: 700;
-    color: #fff;
-    padding: 10px 0;
-}
-.right-area a{
-    text-decoration: none;
-}
-
-.right-area p{
-    color: #fff;
-    font-size: 14px;
-}
-.right-area p:hover{
-    font-weight: 700;
-    transition: all 0.3s ease;
-}
-.right-area .footer-list{
-    gap: 10px;
-    display: flex;
-    flex-direction: column;
-}
-.right-area .list-item{
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-/* copyright */
-.copyright{
-    background-color: #EFEFEF;
-    padding: 12px 36px;
-}
-.copyright p{
-    color: #545454;
-    font-size: 12px;
-    text-align: center;
-}
-
-.copyright p:nth-child(2){
-    display: none;
-}
-.copyright span{
-    color: #478E8F;
-}
-.tibame{
-    padding: 0 36px;
-    background-color: #EFEFEF;
-}
-.tibame p{
-    font-size: 12px;
-    color: #161616;
-    text-align: center;
-    font-weight: 700;
-    padding: 10px 0px;
-}
-/* ------------------ Footer End ------------------ */
-
 
 /* ------------------ Footer-RWD Start ------------------ */
 
