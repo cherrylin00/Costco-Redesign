@@ -9,20 +9,581 @@ body {
     color: #161616;
 }
 
-/* radiobtn */
-/* 隱藏原生radio按鈕 */
-.membership-radio {
+/* ------------------ Header Start ------------------ */
+
+header {
+    width: 100%;
+    position: relative;
+}
+.container {
+    margin: 0 auto;
+    max-width: 1280px;
+}
+
+/* Header最上面(藍色)區域 */
+.top-bar {
+    background-color: #0073A6;
+    padding: 5px 80px;
+}
+
+.top-bar ol {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+}
+
+.top-bar ol li {
+    display: flex;
+    align-items: center;
+}
+
+/* EN */
+.top-bar ol li a {
+    text-decoration: none;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    letter-spacing: 0px;
+    font-weight: 700;
+}
+.top-bar ol li a:hover{
+    color: #D7D7D7;
+}
+
+/* 地球&info */
+.top-bar ol li a i {
+    color: #FFF;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+}
+.top-bar ol li a i:hover{
+    color: #D7D7D7;
+}
+
+/* Header中間大區域(白色)區域 */
+.header-main {
+    background-color: #fff;
+    padding: 0px 80px;
+    position: relative;
+}
+.header-main .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 89px;
+}
+.header-main .container .ham-logo {
+    display: flex;
+    align-items: center;
+}
+
+/* 漢堡icon */
+.header-main .container .ham-logo .bi-list {
+    color: #0073A6;
+    font-size: 30px;
+    margin-right: 25px;
+}
+
+/* logo圖 */
+.header-main .logo {
+    background-image: url('../img/logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 200px;
+    height: 90px;
+}
+
+/* 中間導覽列 */
+.header-main .container .main-nav {
+    display: flex;
+    align-items: center;
+}
+.header-main .container .main-nav ol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+.header-main .container .main-nav ol li {
+    padding: 10px;
+    height: 120px;
+    line-height: 120px;
+}
+.header-main .container .main-nav-d ol li {
+    padding: 10px;
+    height: 94px;
+    line-height: 94px;
+}
+.header-main .container .main-nav ol li a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #545454;
+    font-size: 18px;
+    font-weight: 500;
+}
+.header-main .container .main-nav ol li a:hover{
+    color: #1C4F92;
+    transform: translate(0, -2px);
+    transition: all 0.5s ease-in-out;
+}
+
+/* 搜尋欄 */
+.search-bar-container {
+    position: absolute;
+    top: 176px;
+    left: 0;
+    width: 100%;
+    max-width: 1440px;
+    height: 100px;
+    background-color: #007bb8;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0px;
+    gap: 10px;
     display: none;
 }
-.membership-options{
+.search-bar {
+    width: 70%;
+    max-width: 800px;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    padding: 5px 20px;
+}
+.search-bar input {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 50px;
+}
+.search-bar i {
+    margin-right: 10px;
+    font-size: 20px;
+    color: #999;
+}
+
+/* 叉叉icon */
+.search-bar-container .close-btn {
+    position: absolute;
+    right: 70px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+/* 熱搜關鍵字 */
+.hot-keywords {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.hot-keywords a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    position: relative;
+}
+.hot-keywords a:hover{
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+.hot-keywords a:not(:last-child):after{
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 18px;
+    background-color: #fff;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    margin: 0px -4px;
+}
+
+/* 中間導覽列-Hover後出現的下拉選單 */
+.dropdown{
+    display: flex;
+    width: 100vw;
+    position: absolute;
+    left: 0px;
+    top: 100%;
+    z-index: 5;
+    background-color: #fff;
+
+    display: none;
+}
+/* 中間導覽列選項 hover */
+.nav-item:hover > .dropdown{
+    display: flex;
+}
+.dropdown-items{
+    display: flex;
+    flex-direction: column;
+    flex: 40%;
+    padding: 20px 80px 20px 80px;
+}
+.dropdown-img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #E8EDF4;
+    flex: 60%;
+    padding: 20px 40px;
+}
+.dropdown-img h6{
+    align-self: flex-start;
+    font-size: 18px;
+    font-weight: 700;
+    color: #161616;
+    margin-bottom: 15px;
+}
+.dropdown-img img{
+    width: 100%;
+    max-width: 683px;
+}
+.dropdown-items h2{
+    color: #1C4F92;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 32px;
+}
+.dropdown-items .items {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 20px;
+}
+.dropdown-items .items p{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 160%;
+    padding: 10px;
+}
+.dropdown-items .items p a{
+    color: #545454;
+    text-decoration: none;
+}
+
+/* 特殊導覽列 */
+.header-main .container-d {
+    display: flex;
+
+    align-self: center;
+    justify-content: center;
+    padding: 0px;
+    display: none;
+}
+
+/* icon-nav */
+.icon-nav {
+    display: flex;
+    justify-content: flex-end;
+}
+.icon-nav ol {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+}
+.icon-nav ol li {
+    display: flex;
+    align-items: center;
+}
+.icon-nav ol li a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+.icon-nav ol li a i {
+    color: #545454;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+}
+.icon-nav ol li a i:hover{
+    color: #0073A6;
+}
+
+/* 特殊 */
+.icon-nav ol li .bi-cart {
+    position: relative;
+}
+.icon-nav ol li .bi-cart::after {
+    content: '2'; 
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 20px;
+}
+
+/* 手機版右邊漢堡 */
+.icon-nav ol li .bi-list-sm {
+    display: none;
+}
+
+/* 整個下拉選單 */
+.main-nav-sm{
+    background-color: #fff;
+    width: 100vw;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+.main-nav-sm ol{
+    display: flex;
+    flex-direction: column;
+}
+
+.main-nav-sm-item{
+    display: flex;
+    position: relative;
+}
+
+/* 下拉選單大標 */
+.sm-item{
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ccc;
+}
+.sm-item h5{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 160%;
+    color: #1C4F92;
+}
+.sm-item .bi-chevron-down{
+    font-size: 16px;
+    color: #1C4F92;
+}
+
+/* 下拉選單內容 */
+.dropdown-sm{
+    width: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 30px;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+
+    display: none;
+}
+.dropdown-sm a{
+    text-decoration: none;
+    color: #545454;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 160%;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+}
+.dropdown-sm a:hover{
+    color: #1C4F92;
+    transform: translate(0, -2px);
+    transition: all 0.5s ease-in-out;
+}
+
+/* 最新消息 */
+.news {
+    background-color: #EFEFEF;
+    padding: 4px 80px;
+    z-index: 1;
+    position: relative;
+}
+.news p a {
+    color: #545454;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ------------------ Header End ------------------ */
+
+/* ------------------ Header RWD Start------------------ */
+
+@media screen and (max-width:1400px) {
+    .header-main .container {
+        gap: 20px;
+        transition: all 0.3s ease; 
+    }
+}
+
+@media screen and (max-width:1240px) {
+    .header-main .container .main-nav {
+        display: none;
+        transition: all 0.3s ease; 
+    }
+    .header-main .container-d {
+        display: flex;
+        border-top: 1px solid #ccc;
+        transition: all 0.3s ease; 
+    }
+    .header-main .container-d .main-nav-d {
+        display: flex;
+        flex-direction: column;
+        transition: all 0.3s ease; 
+    }
+    header .container {
+        width: 100%;
+        transition: all 0.3s ease; 
+    }
+    .top-bar {
+        padding: 5px 24px;
+        transition: all 0.3s ease; 
+    }
+    .header-main {
+        padding: 25px 24px 0px 24px;
+        transition: all 0.3s ease; 
+    }
+    .news {
+        padding: 4px 24px;
+        transition: all 0.3s ease; 
+    }
+    .dropdown{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .dropdown-items{
+        padding: 30px 80px;
+    }
+    .dropdown-img{
+        padding: 30px 80px;
+    }
+    .search-bar-container {
+        top: 150px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .top-bar{
+        display: none;
+    }
+    .header-main .logo {
+        width: 135px;
+        height: 35px;
+    }
+    /* 左邊漢堡icon */
+    .header-main .container .ham-logo .bi-list {
+        display: none;
+    }
+    .icon-nav ol li .bi-list-sm {
+        display: flex;
+        color: #545454;
+    }
+    .icon-nav ol{
+        gap: 15px;
+    }
+    .header-main {
+        padding: 25px 24px 25px 24px;
+    }
+    .header-main:hover ~ .dropdown1{
+        display: none;
+    }
+    .header-main .container-d {
+        display: none;
+    }
+    .search-bar-container {     
+        top: 0;
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+    .search-bar {
+        padding: 0px 20px;
+    }
+    .search-bar input {
+        border: none;
+        outline: none;
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 50px;
+    }
+    .search-bar i {
+        margin-right: 10px;
+        font-size: 20px;
+        color: #999;
+    }
+    .search-bar-container .close-btn {
+        right: 50px;
+    }
+    .hot-keywords {
+        display: none
+    }
+}
+
+@media screen and (max-width:430px){
+    .header-main {
+        padding: 25px 12px 25px 12px;
+    }
+    .news{
+        display: none;
+    }
+    .icon-nav ol{
+        gap: 12px;
+    }
+    .search-bar-container {     
+        padding: 0px 20px;
+    }
+} 
+/* ------------------ Header RWD End------------------ */
+
+
+/*  Member-level-------------------------------------------------------------開始 */
+
+/* ------------------ 共用樣式 開始 ------------------ */
+
+/* Radiobtn */
+/* 隱藏原生radio按鈕 */
+.old-radio {
+    display: none;
+}
+.radio-options{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 50px;
+
     display: none;
 }
 /* 基本label樣式 */
-.membership-label {
+.radio-text {
     display: inline-flex;
     align-items: center;
     font-size: 18px;
@@ -31,7 +592,7 @@ body {
 }
 
 /* 自訂radio按鈕 */
-.membership-label::before {
+.radio-text::before {
     content: '';
     display: inline-block;
     width: 24px;
@@ -44,25 +605,28 @@ body {
 }
 
 /* 當radio按鈕被選中時的樣式 */
-.membership-radio:checked + .membership-label::before {
+.old-radio:checked + .radio-text::before {
     border-color: #0073A6;
     background-color: #0073A6;
     box-shadow: 0 0 0 2px #fff inset;
 }
 
-
-/* ------------------ Member-levle Start ------------------ */
-
-/* .wrapper{
-    max-width: 1440px;
-    padding: 40px 0px;
-    margin: 0 auto;
-} */
-
-.wrapper{
-    width: 100%;
-    padding: 20px 0;
+/* btn */
+/* 網頁按鈕樣式 */
+.btn{
+    width: 250px;
+    height: 50px;
+    background-color: #1C4F92;
+    border: 0;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
 }
+.btn:hover{
+    background-color: #153B6E;
+}
+
 /* 麵包屑 */
 .breadcrumb{
     display: flex;
@@ -81,17 +645,28 @@ body {
 .breadcrumb-item:not(:last-child):after{
     content: '\F285';
     font-family: 'Bootstrap-Icons';
-    font-size: 12px;
+    font-size: 14px;
     display: inline-block;
     padding: 0 10px;
 }
 .breadcrumb-item a{
     text-decoration: none;
-    font-size: 12px;
+    font-size: 14px;
     color: #545454;
 }
 .breadcrumb-item a:hover{
     color: #1C4F92;
+}
+
+/* ------------------ 共用樣式 結束 ------------------ */
+
+
+
+/* ------------------ Member-level Start ------------------ */
+
+.wrapper{
+    width: 100%;
+    padding: 20px 0;
 }
 
 /* main */
@@ -156,12 +731,9 @@ body {
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-
     position: relative;
-    /* 卡片過渡動畫 */
     transition: all 0.3s ease;
 }
-
 .card:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     transform: translateY(-10px);
@@ -238,23 +810,7 @@ body {
     display: none;
 }
 
-/* btn */
 /* 填寫完成btn */
-
-/* 網頁按鈕樣式 */
-.btn{
-    width: 250px;
-    height: 50px;
-    background-color: #1C4F92;
-    border: 0;
-    border-radius: 8px;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 700;
-}
-.btn:hover{
-    background-color: #153B6E;
-}
 .submit-area{
     display: flex;
     flex-direction: column;
@@ -306,11 +862,12 @@ body {
     display: none;
 }
 
-/* ------------------ Member-levle End ------------------ */
+/* ------------------ Member-level End ------------------ */
 
 
 
-/* ------------------ Member-levle-RWD Start ------------------ */
+/* ------------------ Member-level-RWD Start ------------------ */
+
 @media screen and (max-width:1280px){
     .main-container{
         flex-direction: column;
@@ -340,7 +897,7 @@ body {
     .breadcrumb{
         margin-left: 16px;
     }
-    .membership-options{
+    .radio-options{
         display: flex;
         gap: 16px;
     } 
@@ -351,11 +908,12 @@ body {
         flex-direction: column;
     }
     .main-title{
+        /* outline: 1px solid red; */
         text-align: center;
         font-size: 32px; 
         font-weight: 700;
         line-height: 160%;
-        margin-bottom: 16px;
+        margin-bottom: 32px;
     }
     .tag{
         width: 100%;
@@ -454,7 +1012,7 @@ body {
         padding: 0 20px;
     }
     .main-title{
-        font-size: 20px; 
+        font-size: 32px; 
         margin: 24px 0px;
     }
     .card-area{
@@ -471,6 +1029,247 @@ body {
         width: 100%;
     }
 }
-/* ------------------ Member-levle-RWD End ------------------ */
+/* ------------------ Member-level-RWD End ------------------ */
+
+
+/*  Index-------------------------------------------------------------結束 */
+
+
+/* ------------------ Footer Start ------------------ */
+
+/* 整個footer */
+.footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: #0073A6;
+    margin: 0 auto;
+    padding: 25px 81px;
+}
+
+/* 左側區域 */
+.left-area{
+    width: 20%;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 49px;
+    padding-top: 10px;
+}
+
+/* logo圖 */
+.footer .logo img{
+    width: 200px;
+}
+
+/* social-media icon */
+.social-media{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+.social-media .bi{
+    font-size: 45px;
+    color:#fff;
+}
+.social-media .bi:hover{
+    font-size: 45px;
+    color:#161616;
+    transition: all 0.33s ease;
+}
+
+/* apps */
+.apps{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+.apps img{
+    max-width: 128px;
+}
+.apps li{
+    list-style: none;
+}
+.apps-icon{
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+
+    display: none;
+}
+.apps-icon .bi{
+    font-size: 24px;
+    color: #161616;
+}
+
+/* line */
+.footer .line{
+    width: 1px;
+    height: 450px;
+    background-color: #fff;
+    margin: 0 57px;
+}
+
+/* right-area */
+.right-area{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+.right-area h6{
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    padding: 10px 0;
+}
+.right-area a{
+    text-decoration: none;
+}
+
+.right-area p{
+    color: #fff;
+    font-size: 14px;
+}
+.right-area p:hover{
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+.right-area .footer-list{
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.right-area .list-item{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+/* copyright */
+.copyright{
+    background-color: #EFEFEF;
+    padding: 12px 36px;
+}
+.copyright p{
+    color: #545454;
+    font-size: 12px;
+    text-align: center;
+}
+
+.copyright p:nth-child(2){
+    display: none;
+}
+.copyright span{
+    color: #478E8F;
+}
+.tibame{
+    padding: 0 36px;
+    background-color: #EFEFEF;
+}
+.tibame p{
+    font-size: 12px;
+    color: #161616;
+    text-align: center;
+    font-weight: 700;
+    padding: 10px 0px;
+}
+/* ------------------ Footer End ------------------ */
+
+
+/* ------------------ Footer-RWD Start ------------------ */
+
+@media screen and (max-width: 1024px) {
+    .footer {
+        flex-direction: column; /* 小螢幕下垂直排列 */
+        align-items: center;
+        padding: 24px 0px;
+        gap: 32px;
+    }
+    .left-area{
+        flex-direction: row;
+        justify-content: center;
+        width: 0%;
+        min-width: 0px;
+        gap: 32px;
+        padding: 0;
+        order: 2;
+    }
+    .footer .logo img{
+        display: none;
+    }
+    .social-media .bi{
+        font-size: 24px;
+        color:#fff;
+    }
+    .social-media .bi:hover{
+        font-size: 24px;
+        transition: all 0.3s ease;
+    }
+    .apps{
+        display: none;
+    }
+    .apps-icon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .apps-icon .bi:hover{
+        color:#fff;
+        transition: all 0.3s ease;
+
+    }
+    .footer .line{
+        display: none;
+    }
+    .right-area{
+        order: 1;
+    }
+    .right-area .list-item{
+        display: none;
+    }
+    .right-area h6:hover{
+        color: #161616;
+        transition: all 0.3s ease;
+    }
+    .copyright p{
+        display: none;
+    }
+    .copyright p:nth-child(2){
+        display: block;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .footer{
+        padding: 0;
+        gap: 0;
+    }
+    .right-area{
+        flex-direction: column;
+    }
+    .right-area .footer-list h6{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .left-area{
+        padding: 10px;
+    }
+    .copyright{
+        padding: 10px 36px;
+    }
+    .tibame p{
+        font-size: 11px;
+    }
+}
+
+/* ------------------ Footer-RWD End ------------------ */
+
 
 

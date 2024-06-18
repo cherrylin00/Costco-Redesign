@@ -41,23 +41,4 @@ document.addEventListener('DOMContentLoaded', function() {
             mainNavSm.style.display = 'none';
         }
     });
-
-    items.forEach(function(item) {
-        item.addEventListener('click', function(event) {
-            event.stopPropagation(); // Prevent the click event from bubbling up
-            var dropdown = this.nextElementSibling;
-            if (dropdown.style.display === 'none' || dropdown.style.display === '') {
-                dropdown.style.display = 'block';
-            } else {
-                dropdown.style.display = 'none';
-            }
-        });
-    });
-
-    document.addEventListener('click', function(event) {
-        var isClickInsideMenu = mainNavSm.contains(event.target) || menuIcon.contains(event.target);
-        if (!isClickInsideMenu) {
-            mainNavSm.style.display = 'none';
-        }
-    });
 });

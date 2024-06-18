@@ -4,13 +4,584 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>首頁｜Costco好市多</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    fvondfkondkmgvkm
-    
+
+<!-- * * * ------------------ Header Start ------------------ * * * -->
+    <header>
+        <!-- Header最上面(藍色) 開始-->
+        <div class="top-bar">
+            <div class="container">
+                <nav>
+                    <ol>
+                        <li><a href="#">EN</a></li>
+                        <li><a href="#"><i class="bi bi-globe2"></i></a></li>
+                        <li><a href="#"><i class="bi bi-info-circle"></i></a></li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!-- Header最上面(藍色) 結束-->
+
+        <!-- Header中間大區域(白色) 開始-->
+        <div class="header-main">
+            <div class="container">
+                <!-- 漢堡選單與LOGO -->
+                <div class="ham-logo">
+                    <div class="hamburger"><i class="bi bi-list"></i></div>
+                    <a href="index.html"><div class="logo"></div></a> 
+                </div>
+                <!-- 中間導覽列 開始-->
+                <nav class="main-nav">
+                    <ol>
+                        <!-- 1-新品上市 -->
+                        <li class="nav-item nav-item1">
+                            <a href="#">新品上市</a>
+                            <!-- 1-新品上市選單 -->
+                            <div class="dropdown dropdown1">
+                                <div class="dropdown-items">
+                                    <div class="dropdown-items-content">
+                                        <h2>新品上市</h2>
+                                        <div class="items">
+                                            <p><a href="#">最新商品</a></p>
+                                            <p><a href="#">網路限定</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-img">
+                                    <div class="dropdown-img-content">
+                                        <div class="img-items">
+                                            <h6>猜你喜歡</h6>
+                                            <img src="../Costco-Redesign/img/dropdown1.png" alt="">
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- 2-限時優惠 -->
+                        <li class="nav-item nav-item2">
+                            <a href="#">限時優惠</a>
+                            <!-- 2-限時優惠選單 -->
+                            <div class="dropdown dropdown2">
+                                <div class="dropdown-items">
+                                    <div class="dropdown-items-content">
+                                        <h2>限時優惠</h2>
+                                        <div class="items">
+                                            <p><a href="#">限時搶購</a></p>
+                                            <p><a href="#">精選品牌</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-img">
+                                    <div class="dropdown-img-content">
+                                        <div class="img-items">
+                                            <h6>大家都在看</h6>
+                                            <img src="../Costco-Redesign/img/dropdown2.png" alt="">
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- 3-獨家限定 -->
+                        <li class="nav-item nav-item3">
+                            <a href="#">獨家限定</a>
+                            <!-- 3-獨家限定選單 -->
+                            <div class="dropdown dropdown3">
+                                <div class="dropdown-items">
+                                    <div class="dropdown-items-content">
+                                        <h2>獨家限定</h2>
+                                        <div class="items">
+                                            <p><a href="#">官網精選</a></p>
+                                            <p><a href="#">實體專賣</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-img">
+                                    <div class="dropdown-img-content">
+                                        <div class="img-items">
+                                            <h6>好市多自有品牌</h6>
+                                            <img src="../Costco-Redesign/img/dropdown3.png" alt="">
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+                        </li><!-- 4-企業採購 -->
+                        <li class="nav-item nav-item3">
+                            <a href="#">企業採購</a>
+                            <!-- 4-企業採購選單 -->
+                            <div class="dropdown dropdown3">
+                                <div class="dropdown-items">
+                                    <div class="dropdown-items-content">
+                                        <h2>企業採購</h2>
+                                        <div class="items">
+                                            <p><a href="#">辦公用品、電腦3C</a></p>
+                                            <p><a href="#">食材飲料、寵物用品</a></p>
+                                            <p><a href="#">清潔用品、器材</a></p>
+                                            <p><a href="#">餐飲業用品、耗材</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-img">
+                                    <div class="dropdown-img-content">
+                                        <div class="img-items">
+                                            <h6>好市多自有品牌</h6>
+                                            <img src="../Costco-Redesign/img/dropdown4.png" alt="">
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- 5-關於我們 -->
+                        <li class="nav-item nav-item3">
+                            <a href="#">關於我們</a>
+                            <!-- 5-關於我們選單 -->
+                            <div class="dropdown dropdown3">
+                                <div class="dropdown-items">
+                                    <div class="dropdown-items-content">
+                                        <h2>關於我們</h2>
+                                        <div class="items">
+                                            <p><a href="#">認識我們</a></p>
+                                            <p><a href="#">分店資訊</a></p>
+                                            <p><a href="#">人力招募</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-img">
+                                    <div class="dropdown-img-content">
+                                        <div class="img-items">
+                                            <h6>好市多自有品牌</h6>
+                                            <img src="../Costco-Redesign/img/dropdown5.png" alt="">
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- 6-會員專區 -->
+                        <li class="nav-item nav-item3">
+                            <a href="#">會員專區</a>
+                            <!-- 6-會員專區選單 -->
+                            <div class="dropdown dropdown3">
+                                <div class="dropdown-items">
+                                    <div class="dropdown-items-content">
+                                        <h2>會員專區</h2>
+                                        <div class="items">
+                                            <p><a href="login.html">加入會員</a></p>
+                                            <p><a href="#">會員專屬服務</a></p>
+                                            <p><a href="#">黑鑽卡禮遇</a></p>
+                                            <p><a href="#">聯名卡</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-img">
+                                    <div class="dropdown-img-content">
+                                        <div class="img-items">
+                                            <h6>好市多自有品牌</h6>
+                                            <img src="../Costco-Redesign/img/dropdown2.png" alt="">
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ol>
+                </nav>
+                <!-- 中間選單 結束-->
+
+
+
+                <!-- 右邊四個icon 開始-->
+                <nav class="icon-nav">
+                    <ol>
+                        <li><a href="#" id="search-icon"><i class="bi bi-search"></i></a></li>
+                        <li><a href="login.html"><i class="bi bi-person"></i></a></li>
+                        <li><a href="#"><i class="bi bi-heart"></i></a></li>
+                        <li><a href="#"><i class="bi bi-cart"></i></a></li>
+                        <!-- <li><a href="#"><i class="bi bi-list bi-list-sm"></i></a></li> -->
+                        <li class="bi-list-sm">
+                            <a href="#"><i class="bi bi-list bi-list-sm"></i></a>
+                            <nav class="main-nav-sm">
+                                <ol>
+                                    <li class="main-nav-sm-item">
+                                        <div class="sm-item">
+                                            <h5>新品上市</h5>
+                                            <i class="bi bi-chevron-down"></i>
+                                        </div>
+                                        <div class="dropdown-sm">
+                                            <p><a href="#">最新商品</a></p>
+                                            <p><a href="#">網路限定</a></p>
+                                        </div>
+                                    </li>
+                                    <li class="main-nav-sm-item">
+                                        <div class="sm-item">
+                                            <h5>限時優惠</h5>
+                                            <i class="bi bi-chevron-down"></i>
+                                        </div>
+                                        <div class="dropdown-sm">
+                                            <p><a href="#">限時搶購</a></p>
+                                            <p><a href="#">精選品牌</a></p>
+                                        </div>
+                                    </li>
+                                    <li class="main-nav-sm-item">
+                                        <div class="sm-item">
+                                            <h5>獨家限定</h5>
+                                            <i class="bi bi-chevron-down"></i>
+                                        </div>
+                                        <div class="dropdown-sm">
+                                            <p><a href="#">官網精選</a></p>
+                                            <p><a href="#">實體專賣</a></p>
+                                        </div>
+                                    </li>
+                                    <li class="main-nav-sm-item">
+                                        <div class="sm-item">
+                                            <h5>企業採購</h5>
+                                            <i class="bi bi-chevron-down"></i>
+                                        </div>
+                                        <div class="dropdown-sm">
+                                            <p><a href="#">辦公用品、電腦3C</a></p>
+                                            <p><a href="#">食材飲料、寵物用品</a></p>
+                                            <p><a href="#">清潔用品、器材</a></p>
+                                            <p><a href="#">餐飲業用品、耗材</a></p>
+                                        </div>
+                                    </li>
+                                    <li class="main-nav-sm-item">
+                                        <div class="sm-item">
+                                            <h5>關於我們</h5>
+                                            <i class="bi bi-chevron-down"></i>
+                                        </div>
+                                        <div class="dropdown-sm">
+                                            <p><a href="#">認識我們</a></p>
+                                            <p><a href="#">分店資訊</a></p>
+                                            <p><a href="#">人力招募</a></p>
+                                        </div>
+                                    </li>
+                                    <li class="main-nav-sm-item">
+                                        <div class="sm-item">
+                                            <h5>會員專區</h5>
+                                            <i class="bi bi-chevron-down"></i>
+                                        </div>
+                                        <div class="dropdown-sm">
+                                            <p><a href="login.html">加入會員</a></p>
+                                            <p><a href="#">會員專屬服務</a></p>
+                                            <p><a href="#">黑鑽卡禮遇</a></p>
+                                            <p><a href="#">聯名卡</a></p>
+                                        </div>
+                                    </li>
+                                    
+                                </ol>
+                            </nav>
+                        </li>
+                    </ol>
+                </nav>
+                <!-- 右邊四個icon 結束-->
+            </div>
+
+            <!-- 特殊-中間導覽列 開始 -->
+            <div class="container container-d">
+                <!-- 特殊-中間導覽列 -->
+                <nav class="main-nav main-nav-d">
+                    <ol>
+                        <!-- 1-新品上市 -->
+                        <li class="nav-item nav-item1">
+                            <a href="#">新品上市</a>
+                            <!-- 1-新品上市選單 -->
+                            <div class="dropdown dropdown1">
+                                <div class="dropdown-items">
+                                    <div class="dropdown-items-content">
+                                        <h2>新品上市</h2>
+                                        <div class="items">
+                                            <p><a href="#">最新商品</a></p>
+                                            <p><a href="#">網路限定</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-img">
+                                    <div class="dropdown-img-content">
+                                        <div class="img-items">
+                                            <h6>猜你喜歡</h6>
+                                            <img src="../Costco-Redesign/img/dropdown1.png" alt="">
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- 2-限時優惠 -->
+                        <li class="nav-item nav-item2">
+                            <a href="#">限時優惠</a>
+                            <!-- 2-限時優惠選單 -->
+                            <div class="dropdown dropdown2">
+                                <div class="dropdown-items">
+                                    <div class="dropdown-items-content">
+                                        <h2>限時優惠</h2>
+                                        <div class="items">
+                                            <p><a href="#">限時搶購</a></p>
+                                            <p><a href="#">精選品牌</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-img">
+                                    <div class="dropdown-img-content">
+                                        <div class="img-items">
+                                            <h6>大家都在看</h6>
+                                            <img src="../Costco-Redesign/img/dropdown2.png" alt="">
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- 3-獨家限定 -->
+                        <li class="nav-item nav-item3">
+                            <a href="#">獨家限定</a>
+                            <!-- 3-獨家限定選單 -->
+                            <div class="dropdown dropdown3">
+                                <div class="dropdown-items">
+                                    <div class="dropdown-items-content">
+                                        <h2>獨家限定</h2>
+                                        <div class="items">
+                                            <p><a href="#">官網精選</a></p>
+                                            <p><a href="#">實體專賣</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-img">
+                                    <div class="dropdown-img-content">
+                                        <div class="img-items">
+                                            <h6>好市多自有品牌</h6>
+                                            <img src="../Costco-Redesign/img/dropdown3.png" alt="">
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+                        </li><!-- 4-企業採購 -->
+                        <li class="nav-item nav-item3">
+                            <a href="#">企業採購</a>
+                            <!-- 4-企業採購選單 -->
+                            <div class="dropdown dropdown3">
+                                <div class="dropdown-items">
+                                    <div class="dropdown-items-content">
+                                        <h2>企業採購</h2>
+                                        <div class="items">
+                                            <p><a href="#">辦公用品、電腦3C</a></p>
+                                            <p><a href="#">食材飲料、寵物用品</a></p>
+                                            <p><a href="#">清潔用品、器材</a></p>
+                                            <p><a href="#">餐飲業用品、耗材</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-img">
+                                    <div class="dropdown-img-content">
+                                        <div class="img-items">
+                                            <h6>好市多自有品牌</h6>
+                                            <img src="../Costco-Redesign/img/dropdown4.png" alt="">
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- 5-關於我們 -->
+                        <li class="nav-item nav-item3">
+                            <a href="#">關於我們</a>
+                            <!-- 5-關於我們選單 -->
+                            <div class="dropdown dropdown3">
+                                <div class="dropdown-items">
+                                    <div class="dropdown-items-content">
+                                        <h2>關於我們</h2>
+                                        <div class="items">
+                                            <p><a href="#">認識我們</a></p>
+                                            <p><a href="#">分店資訊</a></p>
+                                            <p><a href="#">人力招募</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-img">
+                                    <div class="dropdown-img-content">
+                                        <div class="img-items">
+                                            <h6>好市多自有品牌</h6>
+                                            <img src="../Costco-Redesign/img/dropdown5.png" alt="">
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- 6-會員專區 -->
+                        <li class="nav-item nav-item3">
+                            <a href="#">會員專區</a>
+                            <!-- 6-會員專區選單 -->
+                            <div class="dropdown dropdown3">
+                                <div class="dropdown-items">
+                                    <div class="dropdown-items-content">
+                                        <h2>會員專區</h2>
+                                        <div class="items">
+                                            <p><a href="login.html">加入會員</a></p>
+                                            <p><a href="#">會員專屬服務</a></p>
+                                            <p><a href="#">黑鑽卡禮遇</a></p>
+                                            <p><a href="#">聯名卡</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-img">
+                                    <div class="dropdown-img-content">
+                                        <div class="img-items">
+                                            <h6>好市多自有品牌</h6>
+                                            <img src="../Costco-Redesign/img/dropdown2.png" alt="">
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+            <!-- 特殊-中間選單 結束 -->
+        </div>
+        <!-- Header中間大區域(白色) 結束-->
+
+        <!-- 最新消息（灰色） 開始 -->
+        <div class="news">
+            <div class="container">
+                <p><a href="#">618特賣精選 會員價一律8折</a></p>
+            </div>
+        </div>
+        <!-- 最新消息（灰色）結束 -->
+    </header>
+
+     <!-- 搜尋欄  -->
+     <div class="search-bar-container" id="search-bar-container">
+        <div class="search-bar">
+            <i class="bi bi-search"></i>
+            <input type="text" placeholder="請輸入關鍵字">
+        </div>
+        <div class="hot-keywords">
+            <img src="../Costco-Redesign/img/hotkey.png" alt="">
+            <a href="#">粽子</a>
+            <a href="#">連假</a>
+            <a href="#">電風扇</a>
+            <a href="#">電視</a>
+            <a href="#">行李箱</a>
+            <a href="#">筆電</a>
+            <a href="#">除濕機</a>
+            <a href="#">防曬</a>
+            <a href="#">益生菌</a>
+            <a href="#">咖啡</a>
+        </div>
+        <span class="close-btn" id="close-btn">&times;</span>
+    </div>
+
+<!-- * * * ------------------ Header End ------------------ * * * -->
+
+
+
+<!-- --------------------- Index Start --------------------- -->
+    <main>
+        <div class="index-container">
+            <img src="../Costco-Redesign/img/Index-1.png" alt="" class="pic Index_Banner">
+            <img src="../Costco-Redesign/img/Index-2.png" alt="" class="pic Index_Category">
+            <img src="../Costco-Redesign/img/Index-3.png" alt="" class="pic Index_Ranking">
+            <img src="../Costco-Redesign/img/Index-4.png" alt="" class="pic Index_New">
+            <img src="../Costco-Redesign/img/Index-5.png" alt="" class="pic Index_Theme">
+            <img src="../Costco-Redesign/img/Index-6.png" alt="" class="pic Index_Brand">
+            <img src="../Costco-Redesign/img/Index-7.png" alt="" class="pic Index_Show">
+        </div>
+    </main>
+<!-- --------------------- Index End --------------------- -->
+
+
+
+<!-- * * * ------------------ Footer Start ------------------ * * * -->
+    <footer class="footer">
+        <div class="left-area">
+            <a href="index.html" class="logo"><img src="../Costco-Redesign/img/logo.png" alt=""></a>
+            <ul class="social-media">
+                <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+                <li><a href="#"><i class="bi bi-line"></i></a></li>
+                <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+            </ul>
+            <ul class="apps">
+                <li><a href="#"><img src="../Costco-Redesign/img/App-store.png" alt=""></a></li>
+                <li><a href="#"><img src="../Costco-Redesign/img/Google-Play.png" alt=""></a></li>
+            </ul> 
+            <ul class="apps-icon">
+                <li><a href="#"><i class="bi bi-apple"></i></a></li>
+                <li><a href="#"><i class="bi bi-google-play"></i></a></li>
+            </ul>
+        </div>
+        <div class="line"></div>
+        <div class="right-area">
+            <div class="footer-list">
+                <h6>關於好市多</h6>
+                <div class="list-item">
+                    <a href="#"><p>認識我們</p></a>
+                    <a href="#"><p>好市多商品及服務</p></a>
+                    <a href="#"><p>自有品牌-Kirkland</p></a>
+                    <a href="#"><p>好市多樂活誌</p></a>
+                    <a href="#"><p>好事好文分享</p></a>
+                    <a href="#"><p>永續承諾</p></a>
+                    <a href="#"><p>人才招募</p></a>
+                    <a href="#"><p>網站地圖與條款</p></a>
+                    <a href="#"><p>Cookie政策與設定</p></a>
+                </div>
+            </div>
+            <div class="footer-list">
+                <h6>會員專區</h6>
+                <div class="list-item">
+                    <a href="login.html"><p>加入會員</p></a>
+                    <a href="login.html"><p>註冊線上會員</p></a>
+                    <a href="#"><p>黑鑽卡禮遇</p></a>
+                    <a href="#"><p>聯名卡</p></a>
+                    <a href="#"><p>最新消息</p></a>
+                    <a href="#"><p>客服中心</p></a>
+                    <a href="#"><p>會員電子報</p></a>
+                    <a href="#"><p>商品召回訊息</p></a>
+                    <a href="#"><p>法令宣導</p></a>
+                    <a href="#"><p>常見問與答</p></a>
+                    <a href="#"><p>無障礙輔助</p></a>
+                </div>
+            </div>
+            <div class="footer-list">
+                <h6>賣場相關服務</h6>
+                <div class="list-item">
+                    <a href="#"><p>分店資訊</p></a>
+                    <a href="#"><p>即將上市</p></a>
+                    <a href="#"><p>特展活動</p></a>
+                    <a href="#"><p>企業配送服務</p></a>
+                    <a href="#"><p>聽力中心</p></a>
+                    <a href="#"><p>光學眼鏡部</p></a>
+                    <a href="#"><p>加油站</p></a>
+                </div>
+            </div>
+            <div class="footer-list">
+                <h6>廠商與供應商</h6>
+                <div class="list-item">
+                    <a href="#"><p>新廠商新品提案</p></a>
+                    <a href="#"><p>供應鏈需知</p></a>
+                    <a href="#"><p>道德舉報保密熱線</p></a>
+                </div>
+            </div>
+            <div class="footer-list">
+                <h6>防詐騙宣導</h6>
+                <div class="list-item">
+                    <a href="#"><p>防詐騙提醒</p></a>
+                    <a href="#"><p>已知詐騙案例</p></a>
+                    <a href="#"><p>防止詐騙宣導</p></a>
+                    <a href="#"><p>如何檢舉詐騙廣告</p></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="copyright">
+        <p>好市多線上購物已採行<span>隱私權聲明</span>，您應參閱該<span>隱私權聲明</span>以充份瞭解本公司如何使用及蒐集資料。食品業登錄字號： A-196972798-00031-9。<br>© 2015~2024 Costco Wholesale Taiwan and Costco Wholesale Corporation.All Rights Reserved.</p>
+        <p>© 2015~2024 Costco Wholesale Taiwan and Costco Wholesale Corporation.All Rights Reserved.</p>
+    </div>
+    <div class="tibame">
+        <p>本網站為緯育TibaMe【第3期】UI/UX設計師養成作品，僅供學習、展示之用途</p>
+    </div>
+<!-- * * * ------------------ Footer End ------------------ * * * -->
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
