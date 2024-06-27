@@ -994,7 +994,7 @@ header {
     }
     .form-group input[type="email"],
     .form-group input[type="password"] {
-        min-width: 400px;
+        /* min-width: 400px; */
     }
     .login-form {
         /* gap: 16px; */
@@ -1056,7 +1056,7 @@ header {
     }
     .form-group input[type="email"],
     .form-group input[type="password"] {
-        min-width: 400px;
+        /* min-width: 400px; */
     }
     .checkbox-group label {
         font-size: 16px;
