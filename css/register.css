@@ -380,6 +380,8 @@ header {
 .main-nav-sm-item.active > .dropdown-sm{
     height: unset;
     /* height: auto; */
+    padding: 20px 30px;
+
     }
 
 /* 下拉選單大標 */
@@ -409,7 +411,6 @@ header {
     /* display: flex; */
     /* flex-direction: column; */
     /* gap: 10px; */
-    padding: 20px 30px;
     /* position: absolute; */
     /* top: 100%; */
     /* left: 0px; */
