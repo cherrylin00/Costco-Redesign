@@ -301,7 +301,7 @@ header {
     display: flex;
     justify-content: flex-end;
 }
-.icon-nav ol {
+.icon-nav > ol {
     list-style: none;
     display: flex;
     gap: 24px;
@@ -524,7 +524,7 @@ header {
         display: flex;
         color: #545454;
     }
-    .icon-nav ol{
+    .icon-nav > ol{
         gap: 15px;
     }
     .header-main {
@@ -572,7 +572,7 @@ header {
     .news{
         display: none;
     }
-    .icon-nav ol{
+    .icon-nav > ol{
         gap: 12px;
     }
     .search-bar-container {     
