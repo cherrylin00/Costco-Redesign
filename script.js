@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // 
-$('. main-nav-sm-item').each(function () {
+$('.main-nav-sm-item').each(function () {
     $(this).on("click", function () {
         $(this).toggleClass('active')
     
