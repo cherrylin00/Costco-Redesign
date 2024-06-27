@@ -373,8 +373,14 @@ header {
 
 .main-nav-sm-item{
     display: flex;
-    position: relative;
+    flex-direction: column;
+    /* position: relative; */
 }
+
+.main-nav-sm-item.active > .dropdown-sm{
+    height: unset;
+    /* height: auto; */
+    }
 
 /* 下拉選單大標 */
 .sm-item{
@@ -399,16 +405,20 @@ header {
 
 /* 下拉選單內容 */
 .dropdown-sm{
-    width: 100vh;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    width: 100vw;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* gap: 10px; */
     padding: 20px 30px;
-    position: absolute;
-    top: 100%;
-    left: 0px;
+    /* position: absolute; */
+    /* top: 100%; */
+    /* left: 0px; */
 
-    display: none;
+    /* display: none; */
+
+    height: 0;
+    padding: 0;
+    overflow: hidden;
 }
 .dropdown-sm a{
     text-decoration: none;
