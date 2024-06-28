@@ -614,7 +614,7 @@ header {
 }
 .carousel-item img{
     box-sizing: border-box;
-    min-height: 735px; /* 設定圖片的最大高度 */
+    /* min-height: 735px;  */
 
 }
 .topic{
