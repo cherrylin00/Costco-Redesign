@@ -135,17 +135,17 @@ header {
 .header-main .container .main-nav ol li a:hover{
     color: #1C4F92;
     transform: translate(0, -2px);
-    transition: all 0.5s ease-in-out;
+    /* transition: all 0.5s ease-in-out; */
 }
 
 /* 搜尋欄 */
 .search-bar-container {
     position: absolute;
-    top: 176px;
+    top: 0;
     left: 0;
     width: 100%;
-    max-width: 1440px;
-    height: 100px;
+    /* max-width: 1440px; */
+    /* height: 100px; */
     background-color: #007bb8;
     z-index: 1000;
     display: flex;
@@ -192,6 +192,7 @@ header {
 /* 熱搜關鍵字 */
 .hot-keywords {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
     margin-top: 10px;
     justify-content: center;
@@ -458,40 +459,40 @@ header {
 @media screen and (max-width:1400px) {
     .header-main .container {
         gap: 20px;
-        transition: all 0.3s ease; 
+        /* transition: all 0.3s ease;  */
     }
 }
 
 @media screen and (max-width:1240px) {
     .header-main .container .main-nav {
         display: none;
-        transition: all 0.3s ease; 
+        /* transition: all 0.3s ease;  */
     }
     .header-main .container-d {
         display: flex;
         border-top: 1px solid #ccc;
-        transition: all 0.3s ease; 
+        /* transition: all 0.3s ease;  */
     }
     .header-main .container-d .main-nav-d {
         display: flex;
         flex-direction: column;
-        transition: all 0.3s ease; 
+        /* transition: all 0.3s ease;  */
     }
     header .container {
         width: 100%;
-        transition: all 0.3s ease; 
+        /* transition: all 0.3s ease;  */
     }
     .top-bar {
         padding: 5px 24px;
-        transition: all 0.3s ease; 
+        /* transition: all 0.3s ease;  */
     }
     .header-main {
         padding: 25px 24px 0px 24px;
-        transition: all 0.3s ease; 
+        /* transition: all 0.3s ease;  */
     }
     .news {
         padding: 4px 24px;
-        transition: all 0.3s ease; 
+        /* transition: all 0.3s ease;  */
     }
     .dropdown{
         flex-direction: column;
@@ -539,7 +540,7 @@ header {
     .search-bar-container {     
         top: 0;
         align-items: flex-start;
-        padding: 10px 20px;
+        padding: 50px 20px;
     }
     .search-bar {
         padding: 0px 20px;
@@ -576,7 +577,7 @@ header {
         gap: 12px;
     }
     .search-bar-container {     
-        padding: 0px 20px;
+        padding: 20px 20px;
     }
 } 
 /* ------------------ Header RWD End------------------ */
@@ -1044,7 +1045,7 @@ header {
 .social-media .bi:hover{
     font-size: 45px;
     color:#161616;
-    transition: all 0.33s ease;
+    transition: all 0.3s ease;
 }
 
 /* apps */

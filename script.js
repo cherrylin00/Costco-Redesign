@@ -1,3 +1,15 @@
+// .load()必須用live.server
+// html要先加入div
+// 用js把header跟footer導入指定位置
+// 把指定的網頁載入到指定的div裡
+// 好處是之後要改header跟footer裡面的東西，就不用一頁一頁地改
+
+// $(function(){
+//     $('.header-frame').load('header.html');
+//     $('.footer-frame').load('footer.html');
+
+// })
+
 // Header的SearchBar點擊
 document.addEventListener('DOMContentLoaded', function() {
     var searchIcon = document.getElementById('search-icon');
@@ -60,3 +72,4 @@ $('.main-nav-sm-item').each(function () {
     
     });
 })
+
