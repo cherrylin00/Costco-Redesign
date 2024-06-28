@@ -66,7 +66,11 @@ header {
 .header-main {
     background-color: #fff;
     padding: 0px 80px;
-    position: relative;
+    /* position: fixed; */
+    width: 100vw;
+    /* z-index: 99; */
+    top: 0;
+    left: 0;
 }
 .header-main .container {
     display: flex;
@@ -130,17 +134,17 @@ header {
 .header-main .container .main-nav ol li a:hover{
     color: #1C4F92;
     transform: translate(0, -2px);
-    transition: all 0.5s ease-in-out;
+    /* transition: all 0.5s ease-in-out; */
 }
 
 /* 搜尋欄 */
 .search-bar-container {
     position: absolute;
-    top: 176px;
+    top: 0;
     left: 0;
     width: 100%;
     /* max-width: 1440px; */
-    height: 100px;
+    /* height: 100px; */
     background-color: #007bb8;
     z-index: 1000;
     display: flex;
@@ -187,6 +191,7 @@ header {
 /* 熱搜關鍵字 */
 .hot-keywords {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
     margin-top: 10px;
     justify-content: center;
@@ -296,7 +301,7 @@ header {
     display: flex;
     justify-content: flex-end;
 }
-.icon-nav ol {
+.icon-nav > ol {
     list-style: none;
     display: flex;
     gap: 24px;
@@ -351,6 +356,7 @@ header {
 .main-nav-sm{
     background-color: #fff;
     width: 100vw;
+    height: 100vh;
     position: absolute;
     top: 100%;
     left: 0;
@@ -367,8 +373,16 @@ header {
 
 .main-nav-sm-item{
     display: flex;
-    position: relative;
+    flex-direction: column;
+    /* position: relative; */
 }
+
+.main-nav-sm-item.active > .dropdown-sm{
+    height: unset;
+    /* height: auto; */
+    padding: 20px 30px;
+
+    }
 
 /* 下拉選單大標 */
 .sm-item{
@@ -393,16 +407,19 @@ header {
 
 /* 下拉選單內容 */
 .dropdown-sm{
-    width: 100vh;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 20px 30px;
-    position: absolute;
-    top: 100%;
-    left: 0px;
+    width: 100vw;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* gap: 10px; */
+    /* position: absolute; */
+    /* top: 100%; */
+    /* left: 0px; */
 
-    display: none;
+    /* display: none; */
+
+    height: 0;
+    padding: 0;
+    overflow: hidden;
 }
 .dropdown-sm a{
     text-decoration: none;
@@ -441,40 +458,40 @@ header {
 @media screen and (max-width:1400px) {
     .header-main .container {
         gap: 20px;
-        transition: all 0.3s ease; 
+        /* transition: all 0.3s ease;  */
     }
 }
 
 @media screen and (max-width:1240px) {
     .header-main .container .main-nav {
         display: none;
-        transition: all 0.3s ease; 
+        /* transition: all 0.3s ease;  */
     }
     .header-main .container-d {
         display: flex;
         border-top: 1px solid #ccc;
-        transition: all 0.3s ease; 
+        /* transition: all 0.3s ease;  */
     }
     .header-main .container-d .main-nav-d {
         display: flex;
         flex-direction: column;
-        transition: all 0.3s ease; 
+        /* transition: all 0.3s ease;  */
     }
     header .container {
         width: 100%;
-        transition: all 0.3s ease; 
+        /* transition: all 0.3s ease;  */
     }
     .top-bar {
         padding: 5px 24px;
-        transition: all 0.3s ease; 
+        /* transition: all 0.3s ease;  */
     }
     .header-main {
         padding: 25px 24px 0px 24px;
-        transition: all 0.3s ease; 
+        /* transition: all 0.3s ease;  */
     }
     .news {
         padding: 4px 24px;
-        transition: all 0.3s ease; 
+        /* transition: all 0.3s ease;  */
     }
     .dropdown{
         flex-direction: column;
@@ -507,11 +524,13 @@ header {
         display: flex;
         color: #545454;
     }
-    .icon-nav ol{
+    .icon-nav > ol{
         gap: 15px;
     }
     .header-main {
         padding: 25px 24px 25px 24px;
+        position: fixed;
+        z-index: 99;
     }
     .header-main:hover ~ .dropdown1{
         display: none;
@@ -522,9 +541,10 @@ header {
     .search-bar-container {     
         top: 0;
         align-items: flex-start;
-        padding: 10px 20px;
+        padding: 50px 20px;
     }
     .search-bar {
+        width: 85%;
         padding: 0px 20px;
     }
     .search-bar input {
@@ -546,20 +566,25 @@ header {
     .hot-keywords {
         display: none
     }
+    .news {
+        display: none;
+    }
 }
 
 @media screen and (max-width:430px){
     .header-main {
         padding: 25px 12px 25px 12px;
+        position: fixed;
+        z-index: 99;
     }
-    .news{
-        display: none;
-    }
-    .icon-nav ol{
+    .icon-nav > ol{
         gap: 12px;
     }
     .search-bar-container {     
-        padding: 0px 20px;
+        padding: 20px 20px;
+    }
+    .search-bar {     
+        width: 85%;
     }
 } 
 /* ------------------ Header RWD End------------------ */

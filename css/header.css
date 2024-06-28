@@ -458,32 +458,40 @@ header {
 @media screen and (max-width:1400px) {
     .header-main .container {
         gap: 20px;
+        /* transition: all 0.3s ease;  */
     }
 }
 
 @media screen and (max-width:1240px) {
     .header-main .container .main-nav {
         display: none;
+        /* transition: all 0.3s ease;  */
     }
     .header-main .container-d {
         display: flex;
         border-top: 1px solid #ccc;
+        /* transition: all 0.3s ease;  */
     }
     .header-main .container-d .main-nav-d {
         display: flex;
         flex-direction: column;
+        /* transition: all 0.3s ease;  */
     }
     header .container {
         width: 100%;
+        /* transition: all 0.3s ease;  */
     }
     .top-bar {
         padding: 5px 24px;
+        /* transition: all 0.3s ease;  */
     }
     .header-main {
         padding: 25px 24px 0px 24px;
+        /* transition: all 0.3s ease;  */
     }
     .news {
         padding: 4px 24px;
+        /* transition: all 0.3s ease;  */
     }
     .dropdown{
         flex-direction: column;
@@ -558,7 +566,7 @@ header {
     .hot-keywords {
         display: none
     }
-    .news{
+    .news {
         display: none;
     }
 }
@@ -566,6 +574,8 @@ header {
 @media screen and (max-width:430px){
     .header-main {
         padding: 25px 12px 25px 12px;
+        position: fixed;
+        z-index: 99;
     }
     .icon-nav > ol{
         gap: 12px;
