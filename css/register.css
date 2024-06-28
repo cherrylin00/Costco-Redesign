@@ -543,6 +543,7 @@ header {
         padding: 50px 20px;
     }
     .search-bar {
+        width: 85%;
         padding: 0px 20px;
     }
     .search-bar input {
@@ -578,6 +579,9 @@ header {
     }
     .search-bar-container {     
         padding: 20px 20px;
+    }
+    .search-bar {     
+        width: 85%;
     }
 } 
 /* ------------------ Header RWD End------------------ */
