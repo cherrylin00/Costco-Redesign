@@ -707,6 +707,15 @@ header {
 }
 
 /* (3) 暢銷排行 ranking */
+.ranking h2::after{
+    content: '';
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    width: 500px;
+    height: 500px;
+
+}
 
 
 /*  Index-------------------------------------------------------------結束 */
