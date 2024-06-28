@@ -611,9 +611,11 @@ header {
 .carousel{
     padding: 0px;
     position: relative;
+    /* 手機版記得要加margin-top:85px */
 }
 .carousel-item img{
     box-sizing: border-box;
+    width: 100%;
     /* min-height: 735px;  */
 
 }
@@ -625,8 +627,9 @@ header {
     
     float: left;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
 }
 .topic::before{
     content: '';
@@ -676,15 +679,14 @@ header {
 
 /* (2) 全站商品分類 category */
 .category-content{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
     gap: 60px;
 }
 .category-item{
     text-decoration: none;
     display: inline-block;
+    justify-self: center;
 }
 .category-item:hover span{
     background-color: #E8EDF4;
@@ -707,14 +709,22 @@ header {
 }
 
 /* (3) 暢銷排行 ranking */
-.ranking h2::after{
+.ranking h2{
+    position: relative;
+
+}
+.ranking-content::after{
     content: '';
     display: block;
     border: 1px solid #ccc;
     border-radius: 20px;
-    width: 500px;
-    height: 500px;
-
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    position: absolute;
+    top: 32px;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 
 
