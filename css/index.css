@@ -709,23 +709,135 @@ header {
 }
 
 /* (3) 暢銷排行 ranking */
-.ranking h2{
+/* 圓角框 */
+.ranking-content{
+    border: 1px solid #ccc;
+    height: auto;
+    border-radius: 20px;
     position: relative;
+    padding: 50px;
 
 }
-.ranking-content::after{
-    content: '';
-    display: block;
-    border: 1px solid #ccc;
-    border-radius: 20px;
+/* h2 */
+.ranking-content::before{
+    content: '暢銷排行';
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 160%;
+    /* margin-bottom: 120px; */
+    color: #1C4F92;
+    position: absolute;
+    left: 50%;
+    top: -36px;
+    transform: translateX(-50%);
+    background-color: #fff;
+    padding: 0px 30px;
+}
+
+
+
+
+/* 商品 */
+.product{
+    position: relative;
+    display: inline-block;
+    width: 260px;
+    text-align: center;
+    outline: 1px solid yellowgreen;
+    margin: 50px 10px;
+}
+/* 排名1-6的號碼 */
+.ranking-num, 
+.ranking-num-lg{
+    background-color: #E31936;
+    display: inline-block;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+
+    position: absolute;
+    top: -30px;
+    left: -30px;
+}
+.ranking-num-sm{
+    border-radius: 5px;
+    font-size: 15px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+}
+
+/* Ｑ：圖片變形？ */
+.ranking-img{
+    /* outline: 1px solid red; */
+    display: inline-block;
+    text-align: center;
+    width: 200px;
+    height: 250px;
+    line-height: 250px;
+}
+.ranking-img img{
+    display: inline-block;
     width: 100%;
     height: auto;
-    margin: 0 auto;
-    position: absolute;
-    top: 32px;
-    left: 50%;
-    transform: translate(-50%, 0);
+    vertical-align: middle;
+    box-sizing: border-box;
+    background-size: contain;
 }
+
+/* 熱賣/獨家/新品小標籤 */
+.ranking-img + div{
+    text-align: left;
+}
+.product-tag,
+.product-tag_hot{
+    background-color: #FF7F13;
+    display: inline-block;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 8px;
+    line-height: 17px;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    width: 25px;
+    height: 17px;
+    text-align: center;
+    margin-right: 2px;
+
+    justify-self: end;
+}
+.product-tag_only{
+    background-color: #0692A4;
+}
+.product-tag_new{
+    background-color: #0778FB;
+}
+.ranking-img + p{
+    text-align: left;
+}
+
+/* 商品名稱&價格 */
+.product-content{
+    outline: 1px solid blue;
+    display: inline-block;
+    /* width: 260px; */
+    text-align: left;
+    text-decoration: none;
+    color: #161616;
+}
+
+
+
+
+
+
+
+
 
 
 /*  Index-------------------------------------------------------------結束 */
