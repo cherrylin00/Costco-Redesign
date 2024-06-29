@@ -73,3 +73,10 @@ $('.main-nav-sm-item').each(function () {
     });
 })
 
+// toTopbtn
+$(function(){
+    $('.toTopbtn').click(function(){
+        $('html, body').animate({scrollTop: 0},300);
+        return false;
+    })
+})

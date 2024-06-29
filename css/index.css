@@ -43,9 +43,9 @@ header {
     color: #FFF;
     display: flex;
     align-items: center;
-    font-size: 18px;
+    font-size: 16px;
     letter-spacing: 0px;
-    font-weight: 700;
+    font-weight: 500;
 }
 .top-bar ol li a:hover{
     color: #D7D7D7;
@@ -54,7 +54,7 @@ header {
 /* 地球&info */
 .top-bar ol li a i {
     color: #FFF;
-    font-size: 24px;
+    font-size: 20px;
     display: flex;
     align-items: center;
 }
@@ -71,6 +71,7 @@ header {
     /* z-index: 99; */
     top: 0;
     left: 0;
+    position: relative;
 }
 .header-main .container {
     display: flex;
@@ -236,6 +237,9 @@ header {
 /* 中間導覽列選項 hover */
 .nav-item:hover > .dropdown{
     display: flex;
+    padding-top: 33px;
+    background-clip: content-box;
+
 }
 .dropdown-items{
     display: flex;
@@ -604,7 +608,7 @@ header {
     font-weight: 700;
     line-height: 160%;
     color: #1C4F92;
-    margin-bottom: 120px;
+    margin-bottom: 40px;
 }
 
 /* (1) 輪播圖 carousel */
@@ -623,41 +627,35 @@ header {
     display: inline-block;
     text-align: center;
     position: relative;
-    padding: 50px;
+    padding: 30px;
+    background-color: rgba(256, 256, 256, 0.7);
     
-    float: left;
     position: absolute;
     top: 50%;
     left: 10%;
     transform: translateY(-50%);
+
+    transition: all 0.3s ease;
 }
-.topic::before{
-    content: '';
-    display: block;
-    background-color: #fff;
-    opacity: 75%;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+.topic:hover{
+    background-color: rgba(256, 256, 256, 0.8);
+
 }
 .topic-content{
     position: relative;
-
 }
 .topic-content h1{
-    font-size: 40px;
+    font-size: 32px;
     font-weight: 700;
     line-height: 160%;
     color: #163F75;
-    margin-bottom: 53px;
+    margin-bottom: 30px;
     text-align: left;
 }
 .topic-content h3{
-    font-size: 24px;
+    font-size: 18px;
     line-height: 160%;
-    color: #6C6C6C;
+    color: #545454;
     margin-bottom: 53px;
     text-align: left;
 }
@@ -669,9 +667,11 @@ header {
     line-height: 50px;
     background-color: #163F75;
     color: #fff;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
     box-sizing: border-box;
+    transition: all 0.3s ease;
+
 }
 .topic-btn:hover {
     background-color: #112F58;
@@ -682,6 +682,9 @@ header {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 40px;
+}
+.category h2{
+    margin-bottom: 120px;
 }
 .category-item{
     text-decoration: none;
@@ -960,37 +963,41 @@ header {
     position: relative;
 }
 .theme-img{
-    width: 380px;
+    width: 450px;
+    height: 900px;
+    position: relative;
+
 }
 .theme-img img{
     width: 100%;
+    height: 100%;
     display: block;
     border: 0;
     border-radius: 20px 0px 0px 20px;
     box-sizing: border-box;
-    width: 100%;
+    object-fit: cover;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+
+
 }
 .theme-area .theme-topic-area{
     display: inline-block;
     text-align: center;
     position: relative;
     padding: 40px 30px;
+    background-color: rgba(256, 256, 256, 0.7);
     
     position: absolute;
     top: 20%;
     left: 3%;
     transform: translateY(-50%);
+    transition: all 0.3s ease;
 }
-.theme-area .theme-topic::before{
-    content: '';
-    display: block;
-    background-color: #fff;
-    opacity: 75%;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+.theme-area .theme-topic-area:hover{
+    background-color: rgba(256, 256, 256, 0.8);
 }
 .theme-area .theme-topic-content{
     position: relative;
@@ -1024,18 +1031,28 @@ header {
     position: absolute;
     bottom: -60px;
     left: 0;
+    transition: all 0.3s ease;
 }
-.theme-topic-btn:hover {
+.theme-area .theme-topic-area:hover .theme-topic-btn{
     background-color: #112F58;
 }
 
 .theme-product{
-    width: 100%;
-    outline: 1px solid red;
+    /* outline: 1px solid green; */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); */
-    gap: 20px;
+    gap: 10px;
+}
+.theme-product .product{
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+    margin: 0px;
+    transition: all 0.3s ease;
+}
+.theme-product .product-content{
+
 }
 
 
@@ -1139,6 +1156,7 @@ header {
 }
 
 .show-item span{
+    color: #afafaf;
     padding: 10px;
     position: absolute;
     bottom: 0;
@@ -1148,7 +1166,36 @@ header {
     transform: translateY(-10px);
 }
 
+/* 回到頂部 */
+.toTopbtn{
+	display: block;
+	width: 60px;
+	height: 60px;
+	background-color: #153B6E;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	right: 30px;
+	bottom: 60px;
+	text-decoration: none;
+	border-radius: 50%;
+	font-size: 28px;
+	transition: .3s;
+}
 
+.toTopbtn .bi{
+	transition: .3s;
+}
+
+.toTopbtn:hover{
+	background-color: #112F58;
+}
+
+.toTopbtn:hover .bi{
+	transform: translateY(-3px);
+}
 
 
 
