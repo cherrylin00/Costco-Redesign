@@ -681,7 +681,7 @@ header {
 .category-content{
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 60px;
+    gap: 40px;
 }
 .category-item{
     text-decoration: none;
@@ -918,13 +918,22 @@ header {
 .product-sm-content p:not(:last-child){
     margin-bottom: 6px;
 }
+
+
 /* (4) 新品上市 new-arrival */
+.new-arrival-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
 .new-arrival{
     background-color: #E8EDF4;
 }
 .new-list{
     background-color: #fff;
     width: 420px;
+    height: 620px;
     border: 0;
     border-radius: 12px;
     box-sizing: border-box;
@@ -941,6 +950,102 @@ header {
 .new-list .product-sm-content:not(:last-child){
     margin-bottom: 50px;
 }
+
+/* (5) 主題推薦 theme */
+.theme-area{
+    border: 1px solid #ccc;
+    border-radius: 20px;
+
+    display: flex;
+    position: relative;
+}
+.theme-img{
+    width: 380px;
+}
+.theme-img img{
+    width: 100%;
+    display: block;
+    border: 0;
+    border-radius: 20px 0px 0px 20px;
+    box-sizing: border-box;
+    width: 100%;
+}
+.theme-area .theme-topic-area{
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    padding: 40px 30px;
+    
+    position: absolute;
+    top: 20%;
+    left: 3%;
+    transform: translateY(-50%);
+}
+.theme-area .theme-topic::before{
+    content: '';
+    display: block;
+    background-color: #fff;
+    opacity: 75%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.theme-area .theme-topic-content{
+    position: relative;
+
+}
+.theme-area .theme-topic-content h4{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 160%;
+    color: #163F75;
+    margin-bottom: 15px;
+    text-align: left;
+}
+.theme-area .theme-topic-content p{
+    font-size: 16px;
+    line-height: 160%;
+    color: #6C6C6C;
+    text-align: left;
+}
+/* 主題按鈕 */
+.theme-topic-btn{
+    width: 100%;
+    height: 32px;
+    line-height: 32px;
+    background-color: #163F75;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    box-sizing: border-box;
+
+    position: absolute;
+    bottom: -60px;
+    left: 0;
+}
+.theme-topic-btn:hover {
+    background-color: #112F58;
+}
+
+.theme-product{
+    width: 100%;
+    outline: 1px solid red;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); */
+    gap: 20px;
+}
+
+
+
+
+
+
+
+
+
 
 
 
