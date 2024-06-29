@@ -687,13 +687,10 @@ header {
     text-decoration: none;
     display: inline-block;
     justify-self: center;
+    transition: all 0.3s ease;
 }
-.category-item:hover span{
-    background-color: #E8EDF4;
-    padding: 6px;
-    border: 0;
-    border-radius: 5px;
-
+.category-item:hover{
+    transform: translateY(-10px);
 }
 .category-item img{
     display: block;
@@ -708,7 +705,6 @@ header {
     line-height: 160%;
     letter-spacing: 0.5px;
 }
-
 
 /* (3) 暢銷排行 ranking */
 /* 圓角框 */
@@ -755,6 +751,10 @@ header {
     width: 200px;
     text-align: center;
     margin: 50px 30px 50px 10px;
+    transition: all 0.3s ease;
+}
+.product:hover{
+    transform: translateY(-10px);
 }
 /* 排名1-3的號碼 */
 .ranking-num, 
@@ -826,7 +826,6 @@ header {
 .product-content,
 .product-sm-content{
     display: inline-block;
-    /* width: 260px; */
     text-align: left;
     text-decoration: none;
     color: #161616;
@@ -867,8 +866,12 @@ header {
     font-size: 12px;
 }
 /* 排名4-6的號碼 */
-.product-sm{
+.product-sm-content{
     display: inline-block;
+    transition: all 0.3s ease;
+}
+.product-sm-content:hover{
+    transform: translateY(-10px);
 }
 .product-sm-content{
     position: relative;
@@ -915,6 +918,37 @@ header {
 .product-sm-content p:not(:last-child){
     margin-bottom: 6px;
 }
+/* (4) 新品上市 new-arrival */
+.new-arrival{
+    background-color: #E8EDF4;
+}
+.new-list{
+    background-color: #fff;
+    width: 420px;
+    border: 0;
+    border-radius: 12px;
+    box-sizing: border-box;
+    padding: 32px 24px;
+}
+.new-list h4{
+    color: #1C4F92;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 160%;
+    margin-bottom: 40px;
+    text-align: left;
+}
+.new-list .product-sm-content:not(:last-child){
+    margin-bottom: 50px;
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -928,6 +962,8 @@ header {
     text-decoration: none;
     display: inline-block;
     justify-self: center;
+    transition: all 0.3s ease;
+
 }
 .brand-item:hover{
     opacity: 0.9;
@@ -939,6 +975,9 @@ header {
     height: 80px;
     margin-bottom: 10px;
     object-fit: contain;
+}
+.brand-item:hover{
+    transform: translateY(-10px);
 }
 
 /* (7) 特展活動 show */
