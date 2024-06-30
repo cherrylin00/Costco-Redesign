@@ -80,3 +80,5 @@ $(function(){
         return false;
     })
 })
+
+// footer

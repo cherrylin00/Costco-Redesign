@@ -1,4 +1,4 @@
-@import url(/css/reset.css);
+@import url(../css/reset.css);
 
 body{
     font-size: 16px;
@@ -99,6 +99,7 @@ body{
     color: #fff;
     padding: 10px 0;
 }
+
 .right-area a{
     text-decoration: none;
 }
@@ -115,6 +116,7 @@ body{
     gap: 10px;
     display: flex;
     flex-direction: column;
+
 }
 .right-area .list-item{
     display: flex;
@@ -201,9 +203,12 @@ body{
     }
     .right-area{
         order: 1;
+        width: 90%;
     }
     .right-area .list-item{
-        display: none;
+        /* display: none; */
+        text-align: left;
+        margin: 0 auto;
     }
     .right-area h6:hover{
         color: #161616;
@@ -230,8 +235,9 @@ body{
         align-items: center;
         justify-content: center;
 
-        font-size: 14px;
-        font-weight: 400;
+        font-size: 18px;
+        font-weight: 700;
+        padding: 10px;
     }
     .left-area{
         padding: 10px;
@@ -241,6 +247,13 @@ body{
     }
     .tibame p{
         font-size: 11px;
+    }
+    .right-area .list-item{
+        display: none;
+        text-align: center;
+    }
+    .footer-list.active .list-item{
+        display: block;
     }
 }
 
