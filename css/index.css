@@ -547,6 +547,7 @@ header {
     .search-bar {
         width: 85%;
         padding: 0px 20px;
+        position: relative;
     }
     .search-bar input {
         border: none;
@@ -563,6 +564,10 @@ header {
     }
     .search-bar-container .close-btn {
         right: 50px;
+        position: absolute;
+        top: 50%;
+        right: 30px;
+        transform: translate(0px, -50%);
     }
     .hot-keywords {
         display: none
