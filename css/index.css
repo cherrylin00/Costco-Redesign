@@ -1177,7 +1177,7 @@ header {
     display: none;
 }
 .new-arrival{
-    display: none;
+    /* display: none; */
 }
 
 
@@ -1256,6 +1256,9 @@ header {
     /* (4) 新品上市 */
     .new-arrival-area{
         gap: 10px;
+    }
+    .new-list{
+        padding: 32px 12px;
     }
     /* (5) 主題推薦 theme */
     .theme-area{
@@ -1366,6 +1369,20 @@ header {
     .category .category-item span{
         display: inline-block;
     }
+    /* (4) 新品上市 new-arrival */
+    .new-arrival-area{
+        flex-direction: column;
+    }
+    .new-list{
+        width: 100%;
+        height: auto;
+    }
+    .new-list h4{
+        text-align: center;
+    }
+    .new-list .product-sm-content{
+        justify-content: center;
+    }
     /* (5) 主題推薦*/
     .theme-product{
         grid-template-columns: repeat(2, 1fr);
@@ -1374,6 +1391,7 @@ header {
         width: 150px;
         margin: 0 auto;
     }
+
     /* (6) 精選品牌 */
     .brand-content{
         grid-template-columns: repeat(2, 1fr);
@@ -1449,11 +1467,18 @@ header {
         font-weight: 500;
     }
 
+    /* (4) 新品上市 new-arrival */
+    .new-list h4{
+        font-size: 20px;
+        color: #545454;
+    }
+    
     /* (5) 主題推薦*/
     .theme-product{
         grid-template-columns: repeat(1, 1fr);
-        gap: 0px;
+        gap: 10px;
     }
+
 
     /* 回到頂部 */
     .toTopbtn{
