@@ -1187,6 +1187,10 @@ header {
         color: #1C4F92;
         margin-bottom: 40px;
     }
+    /* (1) 輪播圖 carousel */
+    .carousel{
+        padding: 0px;
+    }
     /* (2) 全站分類*/
     .category h2{
         margin-bottom: 80px;
@@ -1203,6 +1207,10 @@ header {
     /* 每一個區塊設定 */
     .section{
         padding: 50px 24px;
+    }
+    /* (1) 輪播圖 carousel */
+    .carousel{
+        padding: 0px;
     }
     /* (2) 全站分類 */
     .category-content{
