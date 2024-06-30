@@ -1245,7 +1245,43 @@ header {
     .new-arrival-area{
         gap: 10px;
     }
-
+    /* (5) 主題推薦 theme */
+    .theme-area{
+        flex-direction: column;
+    }
+    .theme-img{
+        width: 100%;
+        height: 150px;
+    }
+    .theme-img img{
+        width: 100%;
+        height: 100%;
+        border-radius: 20px 20px 0px 0px;
+    }
+    .theme-area .theme-topic-area{
+        padding: 0px;
+        background-color: rgba(256, 256, 256, 0.0);
+        position: absolute;
+        top: 80px;
+        left: 3%;
+    }
+    .theme-area .theme-topic-content h4{
+        display: none;
+    }
+    .theme-area .theme-topic-content p{
+        color: #fff;;
+    }
+    /* 主題按鈕 */
+    .theme-topic-btn{
+        display: none;
+    }
+    .theme-product{
+        padding-bottom: 80px;
+    }
+    .theme-product .product{
+        margin: 0 auto;
+    }
+    
     /* (6) 精選品牌 */
     .brand-content{
         gap: 10px;
