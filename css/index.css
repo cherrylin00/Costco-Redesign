@@ -1171,17 +1171,6 @@ header {
 	transform: translateY(-3px);
 }
 
-
-
-.ranking{
-    display: none;
-}
-.new-arrival{
-    /* display: none; */
-}
-
-
-
 /*  Index-------------------------------------------------------------結束 */
 
 /* Index rwd */
@@ -1211,7 +1200,7 @@ header {
     .ranking-content::before{
         font-size: 32px;
     }
-    .ranking-content{
+    .ranking .ranking-content{
         padding: 80px 10px 30px 30px;
     }
 }
@@ -1240,17 +1229,19 @@ header {
     .ranking-content{
         padding: 80px 10px 30px 10px;
         flex-direction: column;
-        /* display: flex; */
-        /* align-items: center;
-        justify-content: space-evenly; */
+    }
+    .ranking-content .left-area .product{
+        margin: 50px 10px 50px 10px;
     }
     .right-area .product-sm{
-        /* outline: 1px solid red; */
         display: flex;
-        /* flex-direction: column; */
     }
     .right-area .product-sm-content{
         flex-direction: column;
+    }
+    .product-sm-text{
+        padding: 0px 10px;
+        padding-top: 20px;
     }
 
     /* (4) 新品上市 */
@@ -1372,6 +1363,9 @@ header {
     .category .category-item span{
         display: inline-block;
     }
+
+    /* (3) 暢銷排行 ranking */
+    
     /* (4) 新品上市 new-arrival */
     .new-arrival-area{
         flex-direction: column;
