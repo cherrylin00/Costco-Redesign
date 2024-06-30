@@ -894,6 +894,37 @@ header {
     display: none;
 }
 
+/* 回到頂部 */
+.toTopbtn{
+	display: block;
+	width: 60px;
+	height: 60px;
+	background-color: #153B6E;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	right: 30px;
+	bottom: 60px;
+	text-decoration: none;
+	border-radius: 50%;
+	font-size: 28px;
+	transition: .3s;
+}
+
+.toTopbtn .bi{
+	transition: .3s;
+}
+
+.toTopbtn:hover{
+	background-color: #112F58;
+}
+
+.toTopbtn:hover .bi{
+	transform: translateY(-3px);
+}
+
 /* ------------------ Member-level End ------------------ */
 
 
@@ -1059,6 +1090,14 @@ header {
     }
     .btn{
         width: 100%;
+    }
+    /* 回到頂部 */
+    .toTopbtn{
+        width: 40px;
+        height: 40px;
+        right: 20px;
+        bottom: 60px;
+        font-size: 16px;
     }
 }
 /* ------------------ Member-level-RWD End ------------------ */
