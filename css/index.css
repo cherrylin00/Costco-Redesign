@@ -737,7 +737,8 @@ header {
     flex-direction: row;
 }
 
-.ranking-content .right-area{
+.ranking-content .right-area,
+.ranking-content .left-area-sm{
     text-align: left;
     margin-left: 30px;
 }
@@ -862,6 +863,11 @@ header {
 }
 .product-price .score > span{
     font-size: 12px;
+}
+
+/* 特殊1-3 */
+.left-area-sm{
+    display: none;
 }
 /* 排名4-6的號碼 */
 .product-sm-content{
@@ -1233,15 +1239,20 @@ header {
     .ranking-content .left-area .product{
         margin: 50px 10px 50px 10px;
     }
-    .right-area .product-sm{
+    .right-area .product-sm,
+    .left-area-sm .product-sm{
         display: flex;
     }
-    .right-area .product-sm-content{
+    .right-area .product-sm-content,
+    .left-area-sm .product-sm{
         flex-direction: column;
     }
-    .product-sm-text{
+    .ranking .product-sm-text{
         padding: 0px 10px;
         padding-top: 20px;
+    }
+    .ranking .product-sm-text p:first-of-type{
+        width: 200px;
     }
 
     /* (4) 新品上市 */
@@ -1365,9 +1376,29 @@ header {
     }
 
     /* (3) 暢銷排行 ranking */
-    
+    .right-area .product-sm,
+    .left-area-sm .product-sm{
+        flex-direction: column;
+    }
+    .right-area .product-sm-content,
+    .left-area-sm .product-sm-content{
+        flex-direction: row;
+    }
+    .ranking .left-area{
+        display: none;
+    }
+    .left-area-sm{
+        display: flex;
+    }
+
+    .ranking .product-sm-text p:first-of-type{
+        width: 230px;
+    }
+
+
+
     /* (4) 新品上市 new-arrival */
-    .new-arrival-area{
+    .new-arrival .new-arrival-area{
         flex-direction: column;
     }
     .new-list{
@@ -1467,7 +1498,9 @@ header {
         /* color: #161616; */
         font-weight: 500;
     }
-
+    .ranking .product-sm-text p:first-of-type{
+        width: auto;
+    }
     /* (4) 新品上市 new-arrival */
     .new-list h4{
         font-size: 20px;
