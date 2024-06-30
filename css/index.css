@@ -1326,6 +1326,7 @@ header {
     /* 全站分類標題下方留空*/
     .category h2{
         margin-bottom: 40px;
+        color: #545454;
     }
     /* 暢銷排行標題大小*/
     .ranking-content::before{
