@@ -1312,6 +1312,20 @@ header {
 }
 
 @media screen and (max-width:430px){
+    /* 每一個區塊標題 */
+    .section h2{
+        font-size: 24px;
+    }
+    /* 全站分類標題下方留空*/
+    .category h2{
+        margin-bottom: 40px;
+    }
+    /* 暢銷排行標題大小*/
+    .ranking-content::before{
+        font-size: 24px;
+    }
+
+
     /* (1) 輪播圖 carousel */
     /* 輪播文案主題 */
     .carousel .topic{
@@ -1344,11 +1358,12 @@ header {
     /* (2) 全站分類 */
     .category-content{
         grid-template-columns:repeat(2, 1fr);
-        gap: 30px;
+        gap: 10px;
     }
     .category-item{
         display: flex;
         align-items: center;
+        justify-self: left;
         gap: 20px;
     }
     .category-item img{
@@ -1357,7 +1372,7 @@ header {
     }
     .category .category-item span{
         display: inline-block;
-        font-size: 10px;
+        font-size: 16px;
     }
 }
 
