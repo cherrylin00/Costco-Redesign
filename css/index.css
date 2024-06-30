@@ -1449,15 +1449,19 @@ header {
     }
 
     /* (2) 全站分類 */
+    .category{
+        display: grid;
+        justify-content: center;
+    }
     .category-content{
         grid-template-columns:repeat(2, 1fr);
-        gap: 10px;
+        gap: 30px;
     }
     .category-item{
         display: flex;
         align-items: center;
         justify-self: left;
-        gap: 20px;
+        gap: 10px;
     }
     .category-item img{
         width: 50px;
