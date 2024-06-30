@@ -1170,6 +1170,18 @@ header {
 .toTopbtn:hover .bi{
 	transform: translateY(-3px);
 }
+
+
+
+.ranking{
+    display: none;
+}
+.new-arrival{
+    display: none;
+}
+
+
+
 /*  Index-------------------------------------------------------------結束 */
 
 /* Index rwd */
@@ -1281,7 +1293,7 @@ header {
     .theme-product .product{
         margin: 0 auto;
     }
-    
+
     /* (6) 精選品牌 */
     .brand-content{
         gap: 10px;
@@ -1310,6 +1322,7 @@ header {
     .ranking-content::before{
         font-size: 24px;
     }
+
     /* (1) 輪播圖 carousel */
     /* 輪播大圖 */
     .carousel{
@@ -1335,6 +1348,7 @@ header {
         line-height: 30px;
         font-size: 12px;   
     }
+
     /* (2) 全站分類 */
     .category-content{
         grid-template-columns:repeat(2, 1fr);
@@ -1352,11 +1366,20 @@ header {
     .category .category-item span{
         display: inline-block;
     }
+    /* (5) 主題推薦*/
+    .theme-product{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .theme-product .product{
+        width: 150px;
+        margin: 0 auto;
+    }
     /* (6) 精選品牌 */
     .brand-content{
         grid-template-columns: repeat(2, 1fr);
         gap: inherit;
     }
+
     /* (7) 特展活動 */
     .show-list{
         flex-direction: column;
@@ -1424,6 +1447,12 @@ header {
         font-size: 14px;
         /* color: #161616; */
         font-weight: 500;
+    }
+
+    /* (5) 主題推薦*/
+    .theme-product{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0px;
     }
 
     /* 回到頂部 */
