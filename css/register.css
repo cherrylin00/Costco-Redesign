@@ -671,9 +671,12 @@ header {
     margin-bottom: 32px;
     box-sizing: border-box;
     clear: both;
-    font-size: 20px;
-    padding-left: 10px;
-    color: #545454;
+    font-size: 18px;
+    padding: 12px 24px;
+    color: #161616;
+    line-height: 160%;
+    letter-spacing: 0.5px;
+
 }
 
 /* btn */
