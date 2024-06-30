@@ -1205,6 +1205,7 @@ header {
     /* (3) 暢銷排行*/
     .ranking-content::before{
         font-size: 32px;
+        top: -30px;
     }
     .ranking .ranking-content{
         padding: 80px 10px 30px 30px;
@@ -1329,6 +1330,7 @@ header {
     /* 暢銷排行標題大小*/
     .ranking-content::before{
         font-size: 24px;
+        top: -20px;
     }
 
     /* (1) 輪播圖 carousel */
