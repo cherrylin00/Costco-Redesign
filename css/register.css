@@ -671,7 +671,9 @@ header {
     margin-bottom: 32px;
     box-sizing: border-box;
     clear: both;
-    font-size: 24px;
+    font-size: 20px;
+    padding-left: 10px;
+    color: #545454;
 }
 
 /* btn */
