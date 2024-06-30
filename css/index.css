@@ -1208,10 +1208,12 @@ header {
     .section{
         padding: 50px 24px;
     }
+
     /* (1) 輪播圖 carousel */
     .carousel{
         padding: 0px;
     }
+
     /* (2) 全站分類 */
     .category-content{
         grid-template-columns:repeat(5, 1fr);
@@ -1221,6 +1223,7 @@ header {
         width: 80px;
         height: 80px;
     }
+
     /* (3) 暢銷排行 */
     .ranking-content{
         padding: 80px 10px 30px 10px;
@@ -1237,14 +1240,20 @@ header {
     .right-area .product-sm-content{
         flex-direction: column;
     }
+
     /* (4) 新品上市 */
     .new-arrival-area{
         gap: 10px;
     }
+
     /* (6) 精選品牌 */
     .brand-content{
-        gap: 40px;
+        gap: 10px;
     }
+    .brand-item img{
+        max-width: 110px;
+    }
+
     /* (7) 特展活動 */
     .show-list{
         gap: 10px;
@@ -1253,7 +1262,7 @@ header {
 }
 
 @media screen and (max-width:768px){
-    /* Carousel */
+    /* (1) 輪播圖 carousel */
     /* 輪播大圖 */
     .carousel{
         margin-top: 85px;
@@ -1278,11 +1287,32 @@ header {
         line-height: 30px;
         font-size: 12px;   
     }
+    /* (2) 全站分類 */
+    .category-content{
+        grid-template-columns:repeat(2, 1fr);
+        gap: 30px;
+    }
+    .category-item{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    .category-item img{
+        width: 80px;
+        height: 80px;
+    }
+    .category .category-item span{
+        display: inline-block;
+    }
+    /* (6) 精選品牌 */
+    .brand-content{
+        grid-template-columns: repeat(2, 1fr);
+        gap: inherit;
+    }
 }
 
 @media screen and (max-width:430px){
-    /* Carousel */
-    /* 輪播大圖 */
+    /* (1) 輪播圖 carousel */
     /* 輪播文案主題 */
     .carousel .topic{
         padding: 5px;
@@ -1309,6 +1339,25 @@ header {
     .carousel-control-next-icon{
         width: 1rem;
         height: 1rem;
+    }
+
+    /* (2) 全站分類 */
+    .category-content{
+        grid-template-columns:repeat(2, 1fr);
+        gap: 30px;
+    }
+    .category-item{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    .category-item img{
+        width: 30px;
+        height: 30px;
+    }
+    .category .category-item span{
+        display: inline-block;
+        font-size: 10px;
     }
 }
 
