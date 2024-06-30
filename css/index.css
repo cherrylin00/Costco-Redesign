@@ -244,6 +244,7 @@ header {
     top: 100%;
     z-index: 5;
     background-color: #fff;
+    border-bottom: 1px solid #ccc;
 
     display: none;
 }
@@ -425,15 +426,6 @@ header {
 /* 下拉選單內容 */
 .dropdown-sm{
     width: 100vw;
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* gap: 10px; */
-    /* position: absolute; */
-    /* top: 100%; */
-    /* left: 0px; */
-
-    /* display: none; */
-
     height: 0;
     padding: 0;
     overflow: hidden;
@@ -482,36 +474,29 @@ header {
 @media screen and (max-width:1240px) {
     .header-main .container .main-nav {
         display: none;
-        /* transition: all 0.3s ease;  */
     }
     .header-main .container-d {
         display: flex;
         border-top: 1px solid #ccc;
-        /* transition: all 0.3s ease;  */
     }
     .header-main .container-d .main-nav-d {
         display: flex;
         flex-direction: column;
-        /* transition: all 0.3s ease;  */
     }
     header .container {
         width: 100%;
-        /* transition: all 0.3s ease;  */
     }
     .top-bar {
         padding: 5px 24px;
-        /* transition: all 0.3s ease;  */
     }
     .header-main {
         padding: 25px 24px 0px 24px;
-        /* transition: all 0.3s ease;  */
     }
     .news {
         padding: 4px 24px;
-        /* transition: all 0.3s ease;  */
     }
     .dropdown{
-        flex-direction: column;
+        /* flex-direction: column; */
         gap: 30px;
     }
     .dropdown-items{
@@ -585,6 +570,31 @@ header {
     }
     .news {
         display: none;
+    }
+    /* Carousel */
+    /* 輪播大圖 */
+    .carousel{
+        margin-top: 85px;
+    }
+    /* 輪播文案主題 */
+    .carousel .topic{
+        padding: 20px;
+    }
+    .carousel .topic-content h1{
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    .carousel .topic-content h3{
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    
+    /* 按鈕 */
+    .carousel .topic-btn{
+        width: 175px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 12px;   
     }
 }
 
