@@ -43,9 +43,9 @@ header {
     color: #FFF;
     display: flex;
     align-items: center;
-    font-size: 18px;
+    font-size: 16px;
     letter-spacing: 0px;
-    font-weight: 700;
+    font-weight: 500;
 }
 .top-bar ol li a:hover{
     color: #D7D7D7;
@@ -54,7 +54,7 @@ header {
 /* 地球&info */
 .top-bar ol li a i {
     color: #FFF;
-    font-size: 24px;
+    font-size: 20px;
     display: flex;
     align-items: center;
 }
@@ -71,6 +71,7 @@ header {
     /* z-index: 99; */
     top: 0;
     left: 0;
+    position: relative;
 }
 .header-main .container {
     display: flex;
@@ -130,11 +131,12 @@ header {
     color: #545454;
     font-size: 18px;
     font-weight: 500;
+    transition: all 0.3s ease;
 }
+
 .header-main .container .main-nav ol li a:hover{
     color: #1C4F92;
     transform: translate(0, -2px);
-    /* transition: all 0.5s ease-in-out; */
 }
 
 /* 搜尋欄 */
@@ -143,8 +145,6 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    /* max-width: 1440px; */
-    /* height: 100px; */
     background-color: #007bb8;
     z-index: 1000;
     display: flex;
@@ -197,6 +197,20 @@ header {
     justify-content: center;
     flex-wrap: wrap;
 }
+.hot-keywords .bi-fire{
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+    color: #E31936;
+    font-size: 16px;
+    line-height: 160%;
+    font-weight: 500;
+    background-color: #fff;
+    border: 1px solid #E31936;
+    border-radius: 10px;
+    padding: 4px 10px;
+    gap: 4px;
+}
 .hot-keywords a {
     color: white;
     text-decoration: none;
@@ -230,12 +244,16 @@ header {
     top: 100%;
     z-index: 5;
     background-color: #fff;
+    border-bottom: 1px solid #ccc;
 
     display: none;
 }
 /* 中間導覽列選項 hover */
 .nav-item:hover > .dropdown{
     display: flex;
+    padding-top: 33px;
+    background-clip: content-box;
+
 }
 .dropdown-items{
     display: flex;
@@ -408,15 +426,6 @@ header {
 /* 下拉選單內容 */
 .dropdown-sm{
     width: 100vw;
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* gap: 10px; */
-    /* position: absolute; */
-    /* top: 100%; */
-    /* left: 0px; */
-
-    /* display: none; */
-
     height: 0;
     padding: 0;
     overflow: hidden;
@@ -458,47 +467,39 @@ header {
 @media screen and (max-width:1400px) {
     .header-main .container {
         gap: 20px;
-        /* transition: all 0.3s ease;  */
     }
 }
 
 @media screen and (max-width:1240px) {
     .header-main .container .main-nav {
         display: none;
-        /* transition: all 0.3s ease;  */
     }
     .header-main .container-d {
         display: flex;
         border-top: 1px solid #ccc;
-        /* transition: all 0.3s ease;  */
     }
     .header-main .container-d .main-nav-d {
         display: flex;
         flex-direction: column;
-        /* transition: all 0.3s ease;  */
     }
     header .container {
         width: 100%;
-        /* transition: all 0.3s ease;  */
     }
     .top-bar {
         padding: 5px 24px;
-        /* transition: all 0.3s ease;  */
     }
     .header-main {
         padding: 25px 24px 0px 24px;
-        /* transition: all 0.3s ease;  */
     }
     .news {
         padding: 4px 24px;
-        /* transition: all 0.3s ease;  */
     }
     .dropdown{
-        flex-direction: column;
+        /* flex-direction: column; */
         gap: 30px;
     }
     .dropdown-items{
-        padding: 30px 80px;
+        padding: 30px 50px;
     }
     .dropdown-img{
         padding: 30px 80px;
