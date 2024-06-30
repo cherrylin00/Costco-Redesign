@@ -1545,7 +1545,7 @@ header {
 }
 
 /* 左側區域 */
-.left-area{
+.footer .left-area{
     width: 20%;
     min-width: 200px;
     display: flex;
@@ -1612,37 +1612,37 @@ header {
 }
 
 /* right-area */
-.right-area{
+.footer .right-area{
     width: 70%;
     display: flex;
     justify-content: space-between;
 }
-.right-area h6{
+.footer .right-area h6{
     font-size: 18px;
     font-weight: 700;
     color: #fff;
     padding: 10px 0;
 }
 
-.right-area a{
+.footer .right-area a{
     text-decoration: none;
 }
 
-.right-area p{
+.footer .right-area p{
     color: #fff;
     font-size: 14px;
 }
-.right-area p:hover{
+.footer .right-area p:hover{
     font-weight: 700;
     transition: all 0.3s ease;
 }
-.right-area .footer-list{
+.footer .right-area .footer-list{
     gap: 10px;
     display: flex;
     flex-direction: column;
 
 }
-.right-area .list-item{
+.footer .right-area .list-item{
     display: flex;
     flex-direction: column;
     gap: 4px;
@@ -1689,7 +1689,7 @@ header {
         padding: 24px 0px;
         gap: 32px;
     }
-    .left-area{
+    .footer .left-area{
         flex-direction: row;
         justify-content: center;
         width: 0%;
@@ -1725,16 +1725,16 @@ header {
     .footer .line{
         display: none;
     }
-    .right-area{
+    .footer .right-area{
         order: 1;
         width: 90%;
     }
-    .right-area .list-item{
+    .footer .right-area .list-item{
         /* display: none; */
         text-align: left;
         margin: 0 auto;
     }
-    .right-area h6:hover{
+    .footer .right-area h6:hover{
         color: #161616;
         transition: all 0.3s ease;
     }
@@ -1751,10 +1751,10 @@ header {
         padding: 0;
         gap: 0;
     }
-    .right-area{
+    .footer .right-area{
         flex-direction: column;
     }
-    .right-area .footer-list h6{
+    .footer .right-area .footer-list h6{
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1763,7 +1763,7 @@ header {
         font-weight: 700;
         padding: 10px;
     }
-    .left-area{
+    .footer .left-area{
         padding: 10px;
     }
     .copyright{
@@ -1772,7 +1772,7 @@ header {
     .tibame p{
         font-size: 11px;
     }
-    .right-area .list-item{
+    .footer .right-area .list-item{
         display: none;
         text-align: center;
     }
