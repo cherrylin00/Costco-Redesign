@@ -1262,6 +1262,18 @@ header {
 }
 
 @media screen and (max-width:768px){
+    /* 每一個區塊標題 */
+    .section h2{
+        font-size: 24px;
+    }
+    /* 全站分類標題下方留空*/
+    .category h2{
+        margin-bottom: 40px;
+    }
+    /* 暢銷排行標題大小*/
+    .ranking-content::before{
+        font-size: 24px;
+    }
     /* (1) 輪播圖 carousel */
     /* 輪播大圖 */
     .carousel{
@@ -1309,20 +1321,21 @@ header {
         grid-template-columns: repeat(2, 1fr);
         gap: inherit;
     }
+    /* (7) 特展活動 */
+    .show-list{
+        flex-direction: column;
+        gap: 50px;
+    }
+    .show-item{
+        width: 80%;
+        height: auto;
+    }
 }
 
 @media screen and (max-width:430px){
-    /* 每一個區塊標題 */
-    .section h2{
-        font-size: 24px;
-    }
-    /* 全站分類標題下方留空*/
-    .category h2{
-        margin-bottom: 40px;
-    }
-    /* 暢銷排行標題大小*/
-    .ranking-content::before{
-        font-size: 24px;
+    /* 每一個區塊設定 */
+    .section:not(.carousel){
+        padding: 50px 12px;
     }
 
 
@@ -1373,7 +1386,7 @@ header {
     .category .category-item span{
         display: inline-block;
         font-size: 14px;
-        color: #161616;
+        /* color: #161616; */
         font-weight: 500;
     }
 }
