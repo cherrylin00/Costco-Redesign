@@ -1044,10 +1044,10 @@ header {
 }
 
 .theme-product{
-    /* outline: 1px solid green; */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
+    margin: 0 auto;
 }
 .theme-product .product{
     position: relative;
