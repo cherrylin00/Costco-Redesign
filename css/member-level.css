@@ -909,6 +909,10 @@ header {
     background: linear-gradient(45deg, #1e3c72, #2a5298, #004080, #2a5298, #1e3c72);
     background-size: 200% 200%;
     cursor: pointer;
+    transition: all 0.3s ease;
+}
+.join-btn:hover {
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
 }
 @keyframes gradient-animation {
     0% {
