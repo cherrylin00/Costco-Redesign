@@ -1422,6 +1422,7 @@ header {
     /* (5) 主題推薦*/
     .theme-product{
         grid-template-columns: repeat(2, 1fr);
+        column-gap: 75px;
     }
     .theme-product .product{
         width: 150px;
