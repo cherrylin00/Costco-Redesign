@@ -711,6 +711,10 @@ header {
 .topic-btn:hover {
     background-color: #112F58;
 }
+/* 特殊 */
+.member-btn{
+    text-decoration: none;
+}
 
 /* (2) 全站商品分類 category */
 .category-content{
