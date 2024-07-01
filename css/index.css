@@ -1795,12 +1795,12 @@ header {
         align-items: center;
         justify-content: center;
 
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 700;
-        padding: 10px;
+        padding: 16px 10px;
     }
     .footer .left-area{
-        padding: 10px;
+        padding: 16px;
     }
     .copyright{
         padding: 10px 36px;
