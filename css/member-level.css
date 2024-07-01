@@ -344,6 +344,40 @@ header {
 }
 
 /* 特殊 */
+.icon-nav .bi-person{
+    animation: bi-person-move 0.8s ease-in-out 2s infinite;
+    animation-iteration-count: 2;
+}
+@keyframes bi-person-move {
+    0% { transform: translateY(0px); }
+    25% { transform: translateY(-5px); }
+    50% { transform: translateY(0px); }
+    75% { transform: translateY(-5px); }
+    100% { transform: translateY(0px); }
+}
+.icon-nav .bi-person {
+    position: relative;
+}
+.icon-nav .bi-person:hover::after {
+    content: "Click me!";
+    position: absolute;
+    bottom: 100%; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #545454;
+    color: #fff;
+    padding: 3px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    font-size: 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+.icon-nav .bi-person:hover::after {
+    opacity: 1; 
+}
+
 .icon-nav ol li .bi-cart {
     position: relative;
 }
