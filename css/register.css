@@ -998,6 +998,23 @@ header {
     justify-content: center;
     margin-top: 6px;
 }
+.register-btn{
+    animation: gradient-animation 3s ease infinite;
+    background: linear-gradient(45deg, #1e3c72, #2a5298, #004080, #2a5298, #1e3c72);
+    background-size: 200% 200%;
+    cursor: pointer;
+}
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
 
 /* 回到頂部 */
 .toTopbtn{
