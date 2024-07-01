@@ -82,3 +82,9 @@ $(function(){
 })
 
 // footer
+document.querySelectorAll('.footer-list').forEach(list => {
+    list.addEventListener('click', () => {
+        const listItem = list.querySelector('.list-item');
+        listItem.style.display = listItem.style.display === 'none' || !listItem.style.display ? 'block' : 'none';
+    });
+})

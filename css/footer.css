@@ -252,9 +252,7 @@ body{
         display: none;
         text-align: center;
     }
-    .footer-list.active .list-item{
-        display: block;
-    }
+
 }
 
 /* ------------------ Footer-RWD End ------------------ */

@@ -142,7 +142,7 @@ header {
 /* 搜尋欄 */
 .search-bar-container {
     position: absolute;
-    top: 0;
+    top: 156px;
     left: 0;
     width: 100%;
     background-color: #007bb8;
@@ -574,7 +574,7 @@ header {
         display: none;
     }
     .search-bar-container {     
-        top: 0;
+        top: 85px;
         align-items: flex-start;
         padding: 50px 20px;
     }
