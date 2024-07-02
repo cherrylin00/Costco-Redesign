@@ -905,11 +905,11 @@ header {
 
 /* 特殊 */
 .join-btn{
-    animation: gradient-animation 3s ease infinite;
-    background: linear-gradient(45deg, #1e3c72, #2a5298, #004080, #2a5298, #1e3c72);
+    animation: gradient-animation 3s linear infinite;
+    background: linear-gradient(45deg, #1e3c72, #3761aa, #004080, #3560a9, #1e3c72);
     background-size: 200% 200%;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.3s linear;
 }
 .join-btn:hover {
     box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
